@@ -1,56 +1,41 @@
 import { Clock, Mail } from "lucide-react";
+import UTCNHeader from "@/components/UTCNHeader";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 flex flex-col">
-      {/* Header with Logo */}
-      <header className="absolute top-0 left-0 right-0 p-6">
-        <img 
-          src="https://www.utcluj.ro/static/images/logo_utcn_eut.png" 
-          alt="Universitatea Tehnică din Cluj-Napoca"
-          className="h-14 w-auto"
-          onError={(e) => {
-            // Fallback to text if image fails to load
-            e.currentTarget.style.display = 'none';
-          }}
-        />
-      </header>
-
-      {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
-      </div>
+    <div className="min-h-screen bg-[#f9f9f9] flex flex-col">
+      {/* Official UTCN Header */}
+      <UTCNHeader />
 
       {/* Main Content */}
-      <div className="flex-1 flex items-center justify-center px-4">
+      <div className="flex-1 flex items-center justify-center px-4 py-20">
         <div className="relative z-10 text-center max-w-xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/30 mb-6">
-            <Clock className="w-4 h-4 text-accent-foreground" />
-            <span className="text-sm font-medium text-accent-foreground">În curând</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F5A623]/20 border border-[#F5A623]/30 mb-6">
+            <Clock className="w-4 h-4 text-[#996515]" />
+            <span className="text-sm font-medium text-[#996515]">În curând</span>
           </div>
 
           {/* Heading */}
-          <h1 className="font-display font-bold text-4xl md:text-5xl text-foreground mb-4">
+          <h1 className="font-bold text-4xl md:text-5xl text-[#2b2b2b] mb-4" style={{ fontFamily: 'Roboto, sans-serif' }}>
             Proiecte Studențești
-            <span className="block text-primary">UTCN</span>
+            <span className="block text-[#BE1E2D]">UTCN</span>
           </h1>
 
           {/* Description */}
-          <p className="text-lg text-muted-foreground mb-8 max-w-md mx-auto">
+          <p className="text-lg text-[#666] mb-8 max-w-md mx-auto" style={{ fontFamily: 'Roboto, sans-serif' }}>
             Pagina este în curs de dezvoltare. Platforma pentru proiectele studenților de la Universitatea Tehnică din Cluj-Napoca va fi disponibilă în curând.
           </p>
 
           {/* Divider */}
-          <div className="w-16 h-1 bg-primary/30 rounded-full mx-auto mb-8" />
+          <div className="w-16 h-1 bg-[#BE1E2D]/30 rounded-full mx-auto mb-8" />
 
           {/* Contact */}
-          <div className="flex items-center justify-center gap-2 text-muted-foreground">
+          <div className="flex items-center justify-center gap-2 text-[#666]">
             <Mail className="w-5 h-5" />
             <a 
               href="mailto:proiecte@utcluj.ro" 
-              className="hover:text-primary transition-colors"
+              className="hover:text-[#BE1E2D] transition-colors"
             >
               proiecte@utcluj.ro
             </a>

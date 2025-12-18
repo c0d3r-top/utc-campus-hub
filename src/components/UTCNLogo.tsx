@@ -1,60 +1,58 @@
 const UTCNLogo = ({ className = "" }: { className?: string }) => {
   return (
     <svg
-      viewBox="0 0 280 70"
+      viewBox="0 0 320 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      {/* Shield with stripes - UTCN Official Style */}
+      {/* Shield - exact replica */}
       <g>
-        {/* Shield outline */}
+        {/* Shield base shape */}
         <path
-          d="M5 8 L5 42 Q5 58 28 65 Q51 58 51 42 L51 8 L5 8 Z"
+          d="M3 3 L3 32 C3 40 10 48 24 48 C38 48 45 40 45 32 L45 3 L3 3 Z"
           fill="#BE1E2D"
-          stroke="#BE1E2D"
-          strokeWidth="1"
         />
         
-        {/* White stripes inside shield */}
+        {/* White inner area */}
         <path
-          d="M10 13 L10 40 Q10 52 28 58 Q46 52 46 40 L46 13 L10 13 Z"
+          d="M7 7 L7 31 C7 37 12 44 24 44 C36 44 41 37 41 31 L41 7 L7 7 Z"
           fill="#FFFFFF"
         />
         
         {/* Red vertical stripes */}
-        <rect x="14" y="13" width="4" height="45" fill="#BE1E2D" rx="0" />
-        <rect x="22" y="13" width="4" height="47" fill="#BE1E2D" rx="0" />
-        <rect x="30" y="13" width="4" height="47" fill="#BE1E2D" rx="0" />
-        <rect x="38" y="13" width="4" height="45" fill="#BE1E2D" rx="0" />
+        <rect x="10" y="7" width="5" height="34" fill="#BE1E2D" />
+        <rect x="18" y="7" width="5" height="36" fill="#BE1E2D" />
+        <rect x="26" y="7" width="5" height="36" fill="#BE1E2D" />
+        <rect x="34" y="7" width="5" height="34" fill="#BE1E2D" />
         
-        {/* T Letter overlay */}
-        <rect x="16" y="20" width="24" height="6" fill="#BE1E2D" />
-        <rect x="25" y="20" width="6" height="30" fill="#BE1E2D" />
+        {/* White T letter on top */}
+        <rect x="11" y="14" width="26" height="5" fill="#FFFFFF" />
+        <rect x="21" y="14" width="6" height="22" fill="#FFFFFF" />
       </g>
       
-      {/* UNIVERSITATEA TEHNICĂ Text */}
+      {/* Text - UNIVERSITATEA TEHNICĂ */}
       <text
-        x="60"
-        y="32"
-        fontFamily="'Roboto', 'Arial', sans-serif"
+        x="55"
+        y="22"
+        fontFamily="'Roboto', Arial, sans-serif"
         fontWeight="700"
-        fontSize="14"
-        fill="#1a1a2e"
-        letterSpacing="0.5"
+        fontSize="13"
+        fill="#2b2b2b"
+        letterSpacing="0.3"
       >
         UNIVERSITATEA TEHNICĂ
       </text>
       
-      {/* DIN CLUJ-NAPOCA Text */}
+      {/* Text - DIN CLUJ-NAPOCA */}
       <text
-        x="60"
-        y="50"
-        fontFamily="'Roboto', 'Arial', sans-serif"
+        x="55"
+        y="38"
+        fontFamily="'Roboto', Arial, sans-serif"
         fontWeight="400"
-        fontSize="12"
-        fill="#1a1a2e"
-        letterSpacing="0.3"
+        fontSize="11"
+        fill="#666666"
+        letterSpacing="0.2"
       >
         DIN CLUJ-NAPOCA
       </text>

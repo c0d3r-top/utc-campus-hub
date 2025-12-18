@@ -1,12 +1,19 @@
 import { Clock, Mail } from "lucide-react";
-import UTCNLogo from "@/components/UTCNLogo";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 flex flex-col">
       {/* Header with Logo */}
       <header className="absolute top-0 left-0 right-0 p-6">
-        <UTCNLogo className="h-12 w-auto" />
+        <img 
+          src="https://www.utcluj.ro/static/images/logo_utcn_eut.png" 
+          alt="Universitatea Tehnică din Cluj-Napoca"
+          className="h-14 w-auto"
+          onError={(e) => {
+            // Fallback to text if image fails to load
+            e.currentTarget.style.display = 'none';
+          }}
+        />
       </header>
 
       {/* Background decorations */}

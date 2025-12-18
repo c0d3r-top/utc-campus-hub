@@ -1,4 +1,4 @@
-import { MapPin, Facebook, Instagram, Youtube, Linkedin, Search } from "lucide-react";
+import { MapPin, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 
 const UTCNHeader = () => {
   return (
@@ -107,55 +107,6 @@ const UTCNHeader = () => {
         </div>
       </div>
 
-      {/* Navigation Bar - Red */}
-      <nav className="bg-[#BE1E2D]">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <ul className="flex items-center">
-              <li>
-                <a href="#" className="block px-5 py-4 text-white text-sm font-medium hover:bg-[#a01825] transition-colors">
-                  UNIVERSITATEA
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-5 py-4 text-white text-sm font-medium hover:bg-[#a01825] transition-colors">
-                  ADMITERE
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-5 py-4 text-white text-sm font-medium hover:bg-[#a01825] transition-colors">
-                  SUNT STUDENT
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-5 py-4 text-white text-sm font-medium hover:bg-[#a01825] transition-colors">
-                  VIZITEAZĂ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-5 py-4 text-white text-sm font-medium hover:bg-[#a01825] transition-colors">
-                  INTERNATIONAL
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-5 py-4 text-white text-sm font-medium hover:bg-[#a01825] transition-colors">
-                  UTCN100
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-5 py-4 text-white text-sm font-medium hover:bg-[#a01825] transition-colors">
-                  UTCN 2025-STARTUP AN ENGINEER
-                </a>
-              </li>
-            </ul>
-            
-            {/* Search */}
-            <button className="p-4 text-white hover:bg-[#a01825] transition-colors">
-              <Search className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </nav>
     </header>
   );
 };

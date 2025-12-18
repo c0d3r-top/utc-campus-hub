@@ -1,52 +1,62 @@
 const UTCNLogo = ({ className = "" }: { className?: string }) => {
   return (
     <svg
-      viewBox="0 0 200 60"
+      viewBox="0 0 280 70"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      {/* UTCN Shield/Crest simplified */}
+      {/* Shield with stripes - UTCN Official Style */}
       <g>
-        {/* Shield base */}
+        {/* Shield outline */}
         <path
-          d="M10 5 L10 35 Q10 50 25 55 Q40 50 40 35 L40 5 Z"
-          fill="hsl(var(--primary))"
+          d="M5 8 L5 42 Q5 58 28 65 Q51 58 51 42 L51 8 L5 8 Z"
+          fill="#BE1E2D"
+          stroke="#BE1E2D"
+          strokeWidth="1"
         />
-        {/* Inner shield */}
+        
+        {/* White stripes inside shield */}
         <path
-          d="M14 9 L14 34 Q14 46 25 51 Q36 46 36 34 L36 9 Z"
-          fill="hsl(var(--primary-foreground))"
+          d="M10 13 L10 40 Q10 52 28 58 Q46 52 46 40 L46 13 L10 13 Z"
+          fill="#FFFFFF"
         />
-        {/* T symbol inside */}
-        <path
-          d="M18 15 L32 15 L32 19 L27 19 L27 40 L23 40 L23 19 L18 19 Z"
-          fill="hsl(var(--primary))"
-        />
+        
+        {/* Red vertical stripes */}
+        <rect x="14" y="13" width="4" height="45" fill="#BE1E2D" rx="0" />
+        <rect x="22" y="13" width="4" height="47" fill="#BE1E2D" rx="0" />
+        <rect x="30" y="13" width="4" height="47" fill="#BE1E2D" rx="0" />
+        <rect x="38" y="13" width="4" height="45" fill="#BE1E2D" rx="0" />
+        
+        {/* T Letter overlay */}
+        <rect x="16" y="20" width="24" height="6" fill="#BE1E2D" />
+        <rect x="25" y="20" width="6" height="30" fill="#BE1E2D" />
       </g>
       
-      {/* UTCN Text */}
+      {/* UNIVERSITATEA TEHNICĂ Text */}
       <text
-        x="50"
-        y="38"
-        fontFamily="Montserrat, system-ui, sans-serif"
+        x="60"
+        y="32"
+        fontFamily="'Roboto', 'Arial', sans-serif"
         fontWeight="700"
-        fontSize="28"
-        fill="hsl(var(--foreground))"
+        fontSize="14"
+        fill="#1a1a2e"
+        letterSpacing="0.5"
       >
-        UTCN
+        UNIVERSITATEA TEHNICĂ
       </text>
       
-      {/* Subtitle */}
+      {/* DIN CLUJ-NAPOCA Text */}
       <text
-        x="50"
-        y="52"
-        fontFamily="Open Sans, system-ui, sans-serif"
+        x="60"
+        y="50"
+        fontFamily="'Roboto', 'Arial', sans-serif"
         fontWeight="400"
-        fontSize="9"
-        fill="hsl(var(--muted-foreground))"
+        fontSize="12"
+        fill="#1a1a2e"
+        letterSpacing="0.3"
       >
-        UNIVERSITATEA TEHNICĂ CLUJ-NAPOCA
+        DIN CLUJ-NAPOCA
       </text>
     </svg>
   );

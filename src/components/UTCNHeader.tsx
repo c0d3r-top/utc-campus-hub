@@ -16,23 +16,23 @@ const UTCNHeader = () => {
             {/* Right side */}
             <div className="flex items-center gap-0">
               {/* Language switcher */}
-              <a href="#" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">EN</a>
-              <a href="#" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">FR</a>
-              <a href="#" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">DE</a>
-              <a href="#" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Intranet</a>
-              <a href="#" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Telefoane</a>
+              <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">EN</a>
+              <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">FR</a>
+              <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">DE</a>
+              <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Intranet</a>
+              <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Telefoane</a>
               
               {/* Social Icons */}
-              <a href="#" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
+              <a href="#" target="_blank" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
                 <Facebook className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
+              <a href="#" target="_blank" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
                 <Instagram className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
+              <a href="#" target="_blank" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
                 <Youtube className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-r border-[#ddd]">
+              <a href="#" target="_blank" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-r border-[#ddd]">
                 <Linkedin className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -95,6 +95,7 @@ const UTCNHeader = () => {
               {/* Admitere Button */}
               <a 
                 href="#" 
+                target="_blank"
                 className="bg-[#BE1E2D] text-white px-6 py-3 text-sm font-medium hover:bg-[#a01825] transition-colors"
               >
                 <div className="text-center">

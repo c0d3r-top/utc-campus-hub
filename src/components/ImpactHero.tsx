@@ -1,20 +1,23 @@
 import { GraduationCap, Globe, Users } from "lucide-react";
+import impactLogo from "@/assets/impact-utcn-logo.png";
 
 const ImpactHero = () => {
   return (
     <section className="relative bg-gradient-to-br from-[#BE1E2D]/5 via-white to-[#F5A623]/5 py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Project Logo */}
+          <img 
+            src={impactLogo} 
+            alt="IMPACT+UTCN Logo" 
+            className="h-40 md:h-52 mx-auto mb-8"
+          />
+
           {/* Project Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#BE1E2D]/10 border border-[#BE1E2D]/20 mb-6">
             <Globe className="w-4 h-4 text-[#BE1E2D]" />
             <span className="text-sm font-medium text-[#BE1E2D]">Program Erasmus+</span>
           </div>
-
-          {/* Main Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2b2b2b] mb-6" style={{ fontFamily: 'Roboto, sans-serif' }}>
-            IMPACT<span className="text-[#BE1E2D]">+</span>UTCN
-          </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-[#666] mb-8 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Roboto, sans-serif' }}>

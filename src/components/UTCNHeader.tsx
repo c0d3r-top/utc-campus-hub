@@ -1,6 +1,17 @@
-import { MapPin, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import { MapPin, Facebook, Instagram, Youtube, Linkedin, Menu, X, User } from "lucide-react";
+import { useState } from "react";
+
+const menuItems = [
+  { label: "Despre noi", href: "#despre" },
+  { label: "Obiective", href: "#obiective" },
+  { label: "Eligibilitate", href: "#eligibilitate" },
+  { label: "Cum aplic?", href: "#aplicare" },
+  { label: "Contact", href: "#contact" },
+];
 
 const UTCNHeader = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <header className="w-full">
       {/* Top Bar - Gray */}
@@ -10,29 +21,30 @@ const UTCNHeader = () => {
             {/* Address */}
             <div className="flex items-center gap-1 text-[#666]">
               <MapPin className="w-3 h-3" />
-              <span>Strada Memorandumului 28, Cluj-Napoca 400114</span>
+              <span className="hidden sm:inline">Strada Memorandumului 28, Cluj-Napoca 400114</span>
+              <span className="sm:hidden">Cluj-Napoca</span>
             </div>
             
             {/* Right side */}
             <div className="flex items-center gap-0">
               {/* Language switcher */}
               <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">EN</a>
-              <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">FR</a>
-              <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">DE</a>
-              <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Intranet</a>
-              <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Telefoane</a>
+              <a href="#" target="_blank" className="hidden md:block px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">FR</a>
+              <a href="#" target="_blank" className="hidden md:block px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">DE</a>
+              <a href="#" target="_blank" className="hidden lg:block px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Intranet</a>
+              <a href="#" target="_blank" className="hidden lg:block px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Telefoane</a>
               
               {/* Social Icons */}
               <a href="#" target="_blank" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
                 <Facebook className="w-3.5 h-3.5" />
               </a>
-              <a href="#" target="_blank" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
+              <a href="#" target="_blank" className="hidden sm:block px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
                 <Instagram className="w-3.5 h-3.5" />
               </a>
-              <a href="#" target="_blank" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
+              <a href="#" target="_blank" className="hidden sm:block px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
                 <Youtube className="w-3.5 h-3.5" />
               </a>
-              <a href="#" target="_blank" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-r border-[#ddd]">
+              <a href="#" target="_blank" className="hidden sm:block px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-r border-[#ddd]">
                 <Linkedin className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -41,7 +53,7 @@ const UTCNHeader = () => {
       </div>
 
       {/* Main Header - White with logos */}
-      <div className="bg-white py-3">
+      <div className="bg-white py-3 shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             {/* Left - UTCN Logo + EUT+ */}
@@ -59,17 +71,17 @@ const UTCNHeader = () => {
                   <rect x="10" y="16" width="25" height="6" fill="#FFFFFF"/>
                   <rect x="19" y="16" width="7" height="24" fill="#FFFFFF"/>
                 </svg>
-                <div className="leading-tight">
+                <div className="leading-tight hidden sm:block">
                   <p className="text-[11px] font-semibold text-[#2b2b2b] tracking-tight">UNIVERSITATEA TEHNICĂ</p>
                   <p className="text-[9px] text-[#666] tracking-tight">DIN CLUJ-NAPOCA</p>
                 </div>
               </div>
 
               {/* Separator */}
-              <div className="w-px h-10 bg-[#ddd] mx-2"></div>
+              <div className="w-px h-10 bg-[#ddd] mx-2 hidden lg:block"></div>
 
               {/* EUT+ Logo */}
-              <div className="flex items-center gap-2">
+              <div className="hidden lg:flex items-center gap-2">
                 <svg width="80" height="40" viewBox="0 0 80 40" fill="none">
                   <text x="0" y="28" fontFamily="Arial" fontWeight="300" fontSize="24" fill="#00A0D2">—e</text>
                   <text x="28" y="28" fontFamily="Arial" fontWeight="700" fontSize="24" fill="#00A0D2">UT</text>
@@ -82,32 +94,69 @@ const UTCNHeader = () => {
               </div>
             </div>
 
-            {/* Right side - badges and button */}
-            <div className="flex items-center gap-4">
-              {/* HR Badge */}
-              <div className="text-[#F5A623] text-2xl font-bold">hr</div>
-              
-              {/* QS Stars */}
-              <div className="text-xs text-[#666]">
-                <span className="font-semibold">QS</span> STARS
-              </div>
+            {/* Right side - Navigation Menu */}
+            <div className="flex items-center gap-2">
+              {/* Desktop Navigation */}
+              <nav className="hidden lg:flex items-center gap-1">
+                {menuItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="px-3 py-2 text-sm text-[#444] hover:text-[#BE1E2D] hover:bg-[#BE1E2D]/5 rounded-md transition-colors font-medium"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
 
-              {/* Admitere Button */}
-              <a 
-                href="#" 
-                target="_blank"
-                className="bg-[#BE1E2D] text-white px-6 py-3 text-sm font-medium hover:bg-[#a01825] transition-colors"
+              {/* Auth Button */}
+              <a
+                href="#autentificare"
+                className="hidden md:flex items-center gap-2 bg-[#BE1E2D] text-white px-4 py-2 text-sm font-medium hover:bg-[#a01825] transition-colors rounded-md"
               >
-                <div className="text-center">
-                  <div className="font-semibold">Admitere Online</div>
-                  <div className="text-xs opacity-80">Website</div>
-                </div>
+                <User className="w-4 h-4" />
+                <span>Autentificare</span>
               </a>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden p-2 text-[#444] hover:text-[#BE1E2D] hover:bg-[#BE1E2D]/5 rounded-md transition-colors"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-white border-t border-[#e0e0e0] shadow-lg">
+          <div className="container mx-auto px-4 py-4">
+            <nav className="flex flex-col gap-1">
+              {menuItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-4 py-3 text-[#444] hover:text-[#BE1E2D] hover:bg-[#BE1E2D]/5 rounded-md transition-colors font-medium"
+                >
+                  {item.label}
+                </a>
+              ))}
+              <a
+                href="#autentificare"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center gap-2 mt-2 bg-[#BE1E2D] text-white px-4 py-3 text-sm font-medium hover:bg-[#a01825] transition-colors rounded-md justify-center"
+              >
+                <User className="w-4 h-4" />
+                <span>Autentificare</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

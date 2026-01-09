@@ -5,7 +5,7 @@ const menuItems = [
   { label: "Despre noi", href: "/" },
   { label: "Obiective", href: "/obiective" },
   { label: "Eligibilitate", href: "/eligibilitate" },
-  { label: "Cum aplic?", href: "#aplicare" },
+  { label: "Cum aplic?", href: "/cum-aplic" },
   { label: "Contact", href: "#contact" },
 ];
 

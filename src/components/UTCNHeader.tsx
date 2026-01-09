@@ -6,7 +6,7 @@ const menuItems = [
   { label: "Obiective", href: "/obiective" },
   { label: "Eligibilitate", href: "/eligibilitate" },
   { label: "Cum aplic?", href: "/cum-aplic" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const UTCNHeader = () => {

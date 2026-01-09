@@ -2,7 +2,7 @@ import { MapPin, Facebook, Instagram, Youtube, Linkedin, Menu, X, User } from "l
 import { useState } from "react";
 
 const menuItems = [
-  { label: "Despre noi", href: "#despre" },
+  { label: "Despre noi", href: "/" },
   { label: "Obiective", href: "#obiective" },
   { label: "Eligibilitate", href: "#eligibilitate" },
   { label: "Cum aplic?", href: "#aplicare" },

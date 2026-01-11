@@ -6,6 +6,7 @@ const menuItems = [
   { label: "Obiective", href: "/obiective" },
   { label: "Eligibilitate", href: "/eligibilitate" },
   { label: "Cum aplic?", href: "/cum-aplic" },
+  { label: "Echipa", href: "/echipa" },
   { label: "Contact", href: "/contact" },
 ];
 

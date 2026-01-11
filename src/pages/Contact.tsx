@@ -1,71 +1,42 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
-import { z } from "zod";
 import UTCNHeader from "@/components/UTCNHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-
-const contactSchema = z.object({
-  name: z.string().trim().min(1, "Numele este obligatoriu").max(100, "Numele trebuie să aibă maxim 100 caractere"),
-  email: z.string().trim().email("Adresa de email nu este validă").max(255, "Email-ul trebuie să aibă maxim 255 caractere"),
-  subject: z.string().trim().min(1, "Subiectul este obligatoriu").max(200, "Subiectul trebuie să aibă maxim 200 caractere"),
-  message: z.string().trim().min(10, "Mesajul trebuie să aibă minim 10 caractere").max(2000, "Mesajul trebuie să aibă maxim 2000 caractere")
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
+  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
-    if (errors[name as keyof ContactFormData]) {
-      setErrors(prev => ({ ...prev, [name]: undefined }));
-    }
+    if (errors[name]) setErrors(prev => ({ ...prev, [name]: "" }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setErrors({});
-
-    // Validate form data
-    const result = contactSchema.safeParse(formData);
-    if (!result.success) {
-      const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
-      result.error.errors.forEach(err => {
-        if (err.path[0]) {
-          fieldErrors[err.path[0] as keyof ContactFormData] = err.message;
-        }
-      });
-      setErrors(fieldErrors);
-      return;
-    }
-
+    const newErrors: Record<string, string> = {};
+    if (!formData.name.trim()) newErrors.name = t("validation.nameRequired");
+    if (!formData.email.trim() || !/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = t("validation.emailInvalid");
+    if (!formData.subject.trim()) newErrors.subject = t("validation.subjectRequired");
+    if (formData.message.trim().length < 10) newErrors.message = t("validation.messageMin");
+    
+    if (Object.keys(newErrors).length > 0) { setErrors(newErrors); return; }
+    
     setIsSubmitting(true);
-
-    // Simulate form submission (replace with actual API call when backend is set up)
     await new Promise(resolve => setTimeout(resolve, 1000));
-
     setIsSubmitting(false);
     setIsSubmitted(true);
-    toast({
-      title: "Mesaj trimis!",
-      description: "Vă mulțumim pentru mesaj. Vă vom răspunde în cel mai scurt timp.",
-    });
+    toast({ title: t("contact.toastTitle"), description: t("contact.toastDesc") });
   };
 
   if (isSubmitted) {
@@ -74,16 +45,10 @@ const Contact = () => {
         <UTCNHeader />
         <main className="flex-1 flex items-center justify-center py-20">
           <div className="text-center max-w-md mx-auto px-4">
-            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-10 h-10 text-green-600" />
-            </div>
-            <h1 className="text-3xl font-bold text-[#2b2b2b] mb-4">Mesaj Trimis!</h1>
-            <p className="text-[#666] mb-8">
-              Vă mulțumim pentru mesaj. Echipa noastră vă va răspunde în cel mai scurt timp posibil.
-            </p>
-            <Button onClick={() => setIsSubmitted(false)} variant="outline">
-              Trimite alt mesaj
-            </Button>
+            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"><CheckCircle className="w-10 h-10 text-green-600" /></div>
+            <h1 className="text-3xl font-bold text-[#2b2b2b] mb-4">{t("contact.successTitle")}</h1>
+            <p className="text-[#666] mb-8">{t("contact.successDesc")}</p>
+            <Button onClick={() => setIsSubmitted(false)} variant="outline">{t("contact.sendAnother")}</Button>
           </div>
         </main>
         <ProjectFooter />
@@ -94,165 +59,73 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-[#f9f9f9] flex flex-col">
       <UTCNHeader />
-
       <main className="flex-1">
-        {/* Hero Section */}
         <section className="bg-gradient-to-br from-[#BE1E2D]/5 via-white to-[#F5A623]/5 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#BE1E2D]/10 border border-[#BE1E2D]/20 mb-6">
                 <Mail className="w-4 h-4 text-[#BE1E2D]" />
-                <span className="text-sm font-medium text-[#BE1E2D]">Contactează-ne</span>
+                <span className="text-sm font-medium text-[#BE1E2D]">{t("contact.badge")}</span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2b2b2b] mb-6" style={{ fontFamily: 'Roboto, sans-serif' }}>
-                <span className="text-[#BE1E2D]">Contact</span>
-              </h1>
-              <p className="text-lg text-[#666] max-w-2xl mx-auto">
-                Ai întrebări despre proiectul IMPACT+UTCN? Completează formularul de mai jos și te vom contacta în cel mai scurt timp.
-              </p>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2b2b2b] mb-6"><span className="text-[#BE1E2D]">{t("contact.title")}</span></h1>
+              <p className="text-lg text-[#666] max-w-2xl mx-auto">{t("contact.subtitle")}</p>
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
-                {/* Contact Info */}
                 <div className="lg:col-span-1">
-                  <h2 className="text-xl font-bold text-[#2b2b2b] mb-6">Informații de Contact</h2>
-                  
+                  <h2 className="text-xl font-bold text-[#2b2b2b] mb-6">{t("contact.infoTitle")}</h2>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#BE1E2D]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-5 h-5 text-[#BE1E2D]" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-[#2b2b2b] mb-1">Adresă</h3>
-                        <p className="text-[#666] text-sm">
-                          Str. Memorandumului nr. 28<br />
-                          Cluj-Napoca 400114, România
-                        </p>
-                      </div>
+                      <div className="w-10 h-10 bg-[#BE1E2D]/10 rounded-lg flex items-center justify-center flex-shrink-0"><MapPin className="w-5 h-5 text-[#BE1E2D]" /></div>
+                      <div><h3 className="font-semibold text-[#2b2b2b] mb-1">{t("contact.address")}</h3><p className="text-[#666] text-sm">Str. Memorandumului nr. 28<br />Cluj-Napoca 400114, România</p></div>
                     </div>
-
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#BE1E2D]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-5 h-5 text-[#BE1E2D]" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-[#2b2b2b] mb-1">Telefon</h3>
-                        <p className="text-[#666] text-sm">+40 264 401 200</p>
-                      </div>
+                      <div className="w-10 h-10 bg-[#BE1E2D]/10 rounded-lg flex items-center justify-center flex-shrink-0"><Phone className="w-5 h-5 text-[#BE1E2D]" /></div>
+                      <div><h3 className="font-semibold text-[#2b2b2b] mb-1">{t("contact.phone")}</h3><p className="text-[#666] text-sm">+40 264 401 200</p></div>
                     </div>
-
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#BE1E2D]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-5 h-5 text-[#BE1E2D]" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-[#2b2b2b] mb-1">Email</h3>
-                        <a href="mailto:impact@utcluj.ro" className="text-[#BE1E2D] text-sm hover:underline">
-                          impact@utcluj.ro
-                        </a>
-                      </div>
+                      <div className="w-10 h-10 bg-[#BE1E2D]/10 rounded-lg flex items-center justify-center flex-shrink-0"><Mail className="w-5 h-5 text-[#BE1E2D]" /></div>
+                      <div><h3 className="font-semibold text-[#2b2b2b] mb-1">{t("contact.email")}</h3><a href="mailto:impact@utcluj.ro" className="text-[#BE1E2D] text-sm hover:underline">impact@utcluj.ro</a></div>
                     </div>
                   </div>
-
                   <div className="mt-8 p-4 bg-[#F5A623]/10 rounded-lg border border-[#F5A623]/20">
-                    <p className="text-sm text-[#666]">
-                      <strong className="text-[#2b2b2b]">Program:</strong><br />
-                      Luni - Vineri: 09:00 - 17:00
-                    </p>
+                    <p className="text-sm text-[#666]"><strong className="text-[#2b2b2b]">{t("contact.schedule")}</strong><br />{t("contact.scheduleHours")}</p>
                   </div>
                 </div>
 
-                {/* Contact Form */}
                 <div className="lg:col-span-2">
                   <div className="bg-[#f9f9f9] rounded-2xl p-8">
-                    <h2 className="text-xl font-bold text-[#2b2b2b] mb-6">Trimite-ne un Mesaj</h2>
-                    
+                    <h2 className="text-xl font-bold text-[#2b2b2b] mb-6">{t("contact.formTitle")}</h2>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-[#2b2b2b] mb-2">
-                            Nume complet *
-                          </label>
-                          <Input
-                            id="name"
-                            name="name"
-                            type="text"
-                            value={formData.name}
-                            onChange={handleChange}
-                            placeholder="Introdu numele tău"
-                            className={errors.name ? "border-red-500" : ""}
-                          />
+                          <label htmlFor="name" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.fullName")} *</label>
+                          <Input id="name" name="name" type="text" value={formData.name} onChange={handleChange} placeholder={t("contact.namePlaceholder")} className={errors.name ? "border-red-500" : ""} />
                           {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                         </div>
-
                         <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-[#2b2b2b] mb-2">
-                            Adresă email *
-                          </label>
-                          <Input
-                            id="email"
-                            name="email"
-                            type="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            placeholder="exemplu@email.com"
-                            className={errors.email ? "border-red-500" : ""}
-                          />
+                          <label htmlFor="email" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.emailAddress")} *</label>
+                          <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder={t("contact.emailPlaceholder")} className={errors.email ? "border-red-500" : ""} />
                           {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                         </div>
                       </div>
-
                       <div>
-                        <label htmlFor="subject" className="block text-sm font-medium text-[#2b2b2b] mb-2">
-                          Subiect *
-                        </label>
-                        <Input
-                          id="subject"
-                          name="subject"
-                          type="text"
-                          value={formData.subject}
-                          onChange={handleChange}
-                          placeholder="Subiectul mesajului"
-                          className={errors.subject ? "border-red-500" : ""}
-                        />
+                        <label htmlFor="subject" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.subject")} *</label>
+                        <Input id="subject" name="subject" type="text" value={formData.subject} onChange={handleChange} placeholder={t("contact.subjectPlaceholder")} className={errors.subject ? "border-red-500" : ""} />
                         {errors.subject && <p className="text-red-500 text-xs mt-1">{errors.subject}</p>}
                       </div>
-
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-[#2b2b2b] mb-2">
-                          Mesaj *
-                        </label>
-                        <Textarea
-                          id="message"
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          placeholder="Scrie mesajul tău aici..."
-                          rows={6}
-                          className={errors.message ? "border-red-500" : ""}
-                        />
+                        <label htmlFor="message" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.message")} *</label>
+                        <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder={t("contact.messagePlaceholder")} rows={6} className={errors.message ? "border-red-500" : ""} />
                         {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
                       </div>
-
-                      <Button 
-                        type="submit" 
-                        disabled={isSubmitting}
-                        className="w-full bg-[#BE1E2D] hover:bg-[#a01825] text-white"
-                      >
-                        {isSubmitting ? (
-                          "Se trimite..."
-                        ) : (
-                          <>
-                            <Send className="w-4 h-4 mr-2" />
-                            Trimite Mesajul
-                          </>
-                        )}
+                      <Button type="submit" disabled={isSubmitting} className="w-full bg-[#BE1E2D] hover:bg-[#a01825] text-white">
+                        {isSubmitting ? t("contact.submitting") : <><Send className="w-4 h-4 mr-2" />{t("contact.submit")}</>}
                       </Button>
                     </form>
                   </div>
@@ -262,7 +135,6 @@ const Contact = () => {
           </div>
         </section>
       </main>
-
       <ProjectFooter />
     </div>
   );

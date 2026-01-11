@@ -1,13 +1,15 @@
 import { MapPin, Facebook, Instagram, Youtube, Linkedin, Menu, X, User } from "lucide-react";
 import { useState } from "react";
-
-const menuItems = [
-  { label: "Despre noi", href: "/" },
-  { label: "Cum aplic?", href: "/cum-aplic" },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const UTCNHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+
+  const menuItems = [
+    { label: t("header.aboutUs"), href: "/" },
+    { label: t("header.howToApply"), href: "/cum-aplic" },
+  ];
 
   return (
     <header className="w-full">
@@ -25,9 +27,18 @@ const UTCNHeader = () => {
             {/* Right side */}
             <div className="flex items-center gap-0">
               {/* Language switcher */}
-              <a href="#" target="_blank" className="px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">EN</a>
-              <a href="#" target="_blank" className="hidden md:block px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">FR</a>
-              <a href="#" target="_blank" className="hidden md:block px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">DE</a>
+              <button 
+                onClick={() => setLanguage("ro")}
+                className={`px-3 py-1 border-l border-[#ddd] transition-colors ${language === "ro" ? "text-[#BE1E2D] font-semibold" : "text-[#666] hover:text-[#BE1E2D]"}`}
+              >
+                RO
+              </button>
+              <button 
+                onClick={() => setLanguage("en")}
+                className={`px-3 py-1 border-l border-[#ddd] transition-colors ${language === "en" ? "text-[#BE1E2D] font-semibold" : "text-[#666] hover:text-[#BE1E2D]"}`}
+              >
+                EN
+              </button>
               <a href="#" target="_blank" className="hidden lg:block px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Intranet</a>
               <a href="#" target="_blank" className="hidden lg:block px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Telefoane</a>
               
@@ -56,7 +67,7 @@ const UTCNHeader = () => {
             {/* Left - UTCN Logo + EUT+ */}
             <div className="flex items-center gap-4">
               {/* UTCN Logo */}
-              <div className="flex items-center gap-2">
+              <a href="/" className="flex items-center gap-2">
                 {/* Shield */}
                 <svg width="45" height="55" viewBox="0 0 45 55" fill="none">
                   <path d="M2 2 L2 35 C2 45 12 52 22.5 52 C33 52 43 45 43 35 L43 2 L2 2 Z" fill="#BE1E2D"/>
@@ -72,7 +83,7 @@ const UTCNHeader = () => {
                   <p className="text-[11px] font-semibold text-[#2b2b2b] tracking-tight">UNIVERSITATEA TEHNICĂ</p>
                   <p className="text-[9px] text-[#666] tracking-tight">DIN CLUJ-NAPOCA</p>
                 </div>
-              </div>
+              </a>
 
               {/* Separator */}
               <div className="w-px h-10 bg-[#ddd] mx-2 hidden lg:block"></div>
@@ -112,7 +123,7 @@ const UTCNHeader = () => {
                 className="hidden md:flex items-center gap-2 bg-[#BE1E2D] text-white px-4 py-2 text-sm font-medium hover:bg-[#a01825] transition-colors rounded-md"
               >
                 <User className="w-4 h-4" />
-                <span>Autentificare</span>
+                <span>{t("header.login")}</span>
               </a>
 
               {/* Mobile Menu Button */}
@@ -148,7 +159,7 @@ const UTCNHeader = () => {
                 className="flex items-center gap-2 mt-2 bg-[#BE1E2D] text-white px-4 py-3 text-sm font-medium hover:bg-[#a01825] transition-colors rounded-md justify-center"
               >
                 <User className="w-4 h-4" />
-                <span>Autentificare</span>
+                <span>{t("header.login")}</span>
               </a>
             </nav>
           </div>

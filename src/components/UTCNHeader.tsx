@@ -1,6 +1,7 @@
 import { Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import logoSite from "@/assets/logo_site.png";
 
 const UTCNHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,22 +50,12 @@ const UTCNHeader = () => {
             {/* Left - UTCN Logo + EUT+ */}
             <div className="flex items-center gap-4">
               {/* UTCN Logo */}
-              <a href="/" className="flex items-center gap-2">
-                {/* Shield */}
-                <svg width="45" height="55" viewBox="0 0 45 55" fill="none">
-                  <path d="M2 2 L2 35 C2 45 12 52 22.5 52 C33 52 43 45 43 35 L43 2 L2 2 Z" fill="#BE1E2D"/>
-                  <path d="M6 6 L6 34 C6 42 14 48 22.5 48 C31 48 39 42 39 34 L39 6 L6 6 Z" fill="#FFFFFF"/>
-                  <rect x="9" y="6" width="5" height="40" fill="#BE1E2D"/>
-                  <rect x="17" y="6" width="5" height="42" fill="#BE1E2D"/>
-                  <rect x="25" y="6" width="5" height="42" fill="#BE1E2D"/>
-                  <rect x="33" y="6" width="5" height="40" fill="#BE1E2D"/>
-                  <rect x="10" y="16" width="25" height="6" fill="#FFFFFF"/>
-                  <rect x="19" y="16" width="7" height="24" fill="#FFFFFF"/>
-                </svg>
-                <div className="leading-tight hidden sm:block">
-                  <p className="text-[11px] font-semibold text-[#2b2b2b] tracking-tight">UNIVERSITATEA TEHNICĂ</p>
-                  <p className="text-[9px] text-[#666] tracking-tight">DIN CLUJ-NAPOCA</p>
-                </div>
+              <a href="/" className="flex items-center">
+                <img 
+                  src={logoSite} 
+                  alt="Universitatea Tehnică din Cluj-Napoca" 
+                  className="h-12 sm:h-14 w-auto"
+                />
               </a>
 
               {/* Separator */}

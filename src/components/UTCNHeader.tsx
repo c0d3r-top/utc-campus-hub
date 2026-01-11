@@ -1,4 +1,4 @@
-import { MapPin, Facebook, Instagram, Youtube, Linkedin, Menu, X, User } from "lucide-react";
+import { Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -17,11 +17,9 @@ const UTCNHeader = () => {
       <div className="bg-[#f5f5f5] border-b border-[#e0e0e0]">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-8 text-xs">
-            {/* Address */}
-            <div className="flex items-center gap-1 text-[#666]">
-              <MapPin className="w-3 h-3" />
-              <span className="hidden sm:inline">Strada Memorandumului 28, Cluj-Napoca 400114</span>
-              <span className="sm:hidden">Cluj-Napoca</span>
+            {/* Project Name */}
+            <div className="flex items-center gap-1 text-[#666] font-semibold">
+              <span>IMPACT+UTCN</span>
             </div>
             
             {/* Right side */}
@@ -39,22 +37,6 @@ const UTCNHeader = () => {
               >
                 EN
               </button>
-              <a href="#" target="_blank" className="hidden lg:block px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Intranet</a>
-              <a href="#" target="_blank" className="hidden lg:block px-3 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">Telefoane</a>
-              
-              {/* Social Icons */}
-              <a href="#" target="_blank" className="px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
-                <Facebook className="w-3.5 h-3.5" />
-              </a>
-              <a href="#" target="_blank" className="hidden sm:block px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
-                <Instagram className="w-3.5 h-3.5" />
-              </a>
-              <a href="#" target="_blank" className="hidden sm:block px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-[#ddd]">
-                <Youtube className="w-3.5 h-3.5" />
-              </a>
-              <a href="#" target="_blank" className="hidden sm:block px-2 py-1 text-[#666] hover:text-[#BE1E2D] border-l border-r border-[#ddd]">
-                <Linkedin className="w-3.5 h-3.5" />
-              </a>
             </div>
           </div>
         </div>

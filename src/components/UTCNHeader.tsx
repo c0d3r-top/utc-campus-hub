@@ -2,6 +2,7 @@ import { Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logoSite from "@/assets/logo_site.png";
+import eutLogo from "@/assets/eut_logo.png";
 
 const UTCNHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -62,16 +63,12 @@ const UTCNHeader = () => {
               <div className="w-px h-10 bg-[#ddd] mx-2 hidden lg:block"></div>
 
               {/* EUT+ Logo */}
-              <div className="hidden lg:flex items-center gap-2">
-                <svg width="80" height="40" viewBox="0 0 80 40" fill="none">
-                  <text x="0" y="28" fontFamily="Arial" fontWeight="300" fontSize="24" fill="#00A0D2">—e</text>
-                  <text x="28" y="28" fontFamily="Arial" fontWeight="700" fontSize="24" fill="#00A0D2">UT</text>
-                  <text x="60" y="28" fontFamily="Arial" fontWeight="700" fontSize="24" fill="#F5A623">+</text>
-                </svg>
-                <div className="leading-tight">
-                  <p className="text-[8px] text-[#666] uppercase tracking-wider">European University</p>
-                  <p className="text-[8px] text-[#666] uppercase tracking-wider">of Technology</p>
-                </div>
+              <div className="hidden lg:block">
+                <img 
+                  src={eutLogo} 
+                  alt="European University of Technology" 
+                  className="h-12 w-auto"
+                />
               </div>
             </div>
 

@@ -45,6 +45,9 @@ const ProjectFooter = () => {
                 <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
                   {t("footer.contact")}
                 </a>
+                <a href="/gdpr" className="text-gray-400 hover:text-white transition-colors">
+                  {t("footer.gdpr")}
+                </a>
               </nav>
             </div>
 

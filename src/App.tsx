@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import CookieBanner from "./components/CookieBanner";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import Obiective from "./pages/Obiective";
 import Eligibilitate from "./pages/Eligibilitate";
@@ -37,6 +38,7 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
             <CookieBanner />
+            <ScrollToTop />
           </BrowserRouter>
         </TooltipProvider>
       </LanguageProvider>

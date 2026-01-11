@@ -5,7 +5,7 @@ const ProjectFooter = () => {
     <footer className="bg-[#2b2b2b] text-white py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Project Info */}
             <div>
               <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Roboto, sans-serif' }}>
@@ -23,6 +23,27 @@ const ProjectFooter = () => {
                 />
                 <span className="text-xs text-gray-400">Cofinanțat de Uniunea Europeană</span>
               </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: 'Roboto, sans-serif' }}>
+                Link-uri Utile
+              </h3>
+              <nav className="flex flex-col gap-2 text-sm">
+                <a href="/obiective" className="text-gray-400 hover:text-white transition-colors">
+                  Obiective
+                </a>
+                <a href="/eligibilitate" className="text-gray-400 hover:text-white transition-colors">
+                  Eligibilitate
+                </a>
+                <a href="/echipa" className="text-gray-400 hover:text-white transition-colors">
+                  Echipa
+                </a>
+                <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact
+                </a>
+              </nav>
             </div>
 
             {/* Contact */}

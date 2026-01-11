@@ -5,28 +5,10 @@ import { Users, Mail, Linkedin } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Prof. Dr. Ing. Exemplu Nume",
-    role: "Director Proiect",
-    email: "exemplu@utcluj.ro",
-    description: "Responsabil pentru coordonarea generală a proiectului IMPACT+UTCN.",
-  },
-  {
-    name: "Conf. Dr. Ing. Exemplu Nume",
-    role: "Responsabil Grup Țintă",
-    email: "exemplu2@utcluj.ro",
-    description: "Coordonează activitățile de recrutare și monitorizare a studenților din grupul țintă.",
-  },
-  {
-    name: "Lect. Dr. Exemplu Nume",
-    role: "Responsabil Financiar",
-    email: "exemplu3@utcluj.ro",
-    description: "Gestionează aspectele financiare și administrative ale proiectului.",
-  },
-  {
-    name: "Ing. Exemplu Nume",
-    role: "Responsabil Comunicare",
-    email: "exemplu4@utcluj.ro",
-    description: "Coordonează activitățile de comunicare și promovare a proiectului.",
+    name: "Prof. Dr. Raluca Nerisanu",
+    role: "Manager de Proiect",
+    email: "raluca.nerisanu@campus.utcluj.ro",
+    description: "",
   },
 ];
 

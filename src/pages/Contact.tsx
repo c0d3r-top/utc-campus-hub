@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Send, CheckCircle } from "lucide-react";
 import UTCNHeader from "@/components/UTCNHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 import { Button } from "@/components/ui/button";
@@ -76,59 +76,36 @@ const Contact = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-3 gap-12">
-                <div className="lg:col-span-1">
-                  <h2 className="text-xl font-bold text-[#2b2b2b] mb-6">{t("contact.infoTitle")}</h2>
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#BE1E2D]/10 rounded-lg flex items-center justify-center flex-shrink-0"><MapPin className="w-5 h-5 text-[#BE1E2D]" /></div>
-                      <div><h3 className="font-semibold text-[#2b2b2b] mb-1">{t("contact.address")}</h3><p className="text-[#666] text-sm">Str. Memorandumului nr. 28<br />Cluj-Napoca 400114, România</p></div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#BE1E2D]/10 rounded-lg flex items-center justify-center flex-shrink-0"><Phone className="w-5 h-5 text-[#BE1E2D]" /></div>
-                      <div><h3 className="font-semibold text-[#2b2b2b] mb-1">{t("contact.phone")}</h3><p className="text-[#666] text-sm">+40 264 401 200</p></div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-[#BE1E2D]/10 rounded-lg flex items-center justify-center flex-shrink-0"><Mail className="w-5 h-5 text-[#BE1E2D]" /></div>
-                      <div><h3 className="font-semibold text-[#2b2b2b] mb-1">{t("contact.email")}</h3><a href="mailto:impact@utcluj.ro" className="text-[#BE1E2D] text-sm hover:underline">impact@utcluj.ro</a></div>
-                    </div>
-                  </div>
-                  <div className="mt-8 p-4 bg-[#F5A623]/10 rounded-lg border border-[#F5A623]/20">
-                    <p className="text-sm text-[#666]"><strong className="text-[#2b2b2b]">{t("contact.schedule")}</strong><br />{t("contact.scheduleHours")}</p>
-                  </div>
-                </div>
-
-                <div className="lg:col-span-2">
-                  <div className="bg-[#f9f9f9] rounded-2xl p-8">
-                    <h2 className="text-xl font-bold text-[#2b2b2b] mb-6">{t("contact.formTitle")}</h2>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.fullName")} *</label>
-                          <Input id="name" name="name" type="text" value={formData.name} onChange={handleChange} placeholder={t("contact.namePlaceholder")} className={errors.name ? "border-red-500" : ""} />
-                          {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
-                        </div>
-                        <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.emailAddress")} *</label>
-                          <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder={t("contact.emailPlaceholder")} className={errors.email ? "border-red-500" : ""} />
-                          {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-                        </div>
+              <div className="max-w-2xl mx-auto">
+                <div className="bg-[#f9f9f9] rounded-2xl p-8">
+                  <h2 className="text-xl font-bold text-[#2b2b2b] mb-6">{t("contact.formTitle")}</h2>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.fullName")} *</label>
+                        <Input id="name" name="name" type="text" value={formData.name} onChange={handleChange} placeholder={t("contact.namePlaceholder")} className={errors.name ? "border-red-500" : ""} />
+                        {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
                       </div>
                       <div>
-                        <label htmlFor="subject" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.subject")} *</label>
-                        <Input id="subject" name="subject" type="text" value={formData.subject} onChange={handleChange} placeholder={t("contact.subjectPlaceholder")} className={errors.subject ? "border-red-500" : ""} />
-                        {errors.subject && <p className="text-red-500 text-xs mt-1">{errors.subject}</p>}
+                        <label htmlFor="email" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.emailAddress")} *</label>
+                        <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder={t("contact.emailPlaceholder")} className={errors.email ? "border-red-500" : ""} />
+                        {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                       </div>
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.message")} *</label>
-                        <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder={t("contact.messagePlaceholder")} rows={6} className={errors.message ? "border-red-500" : ""} />
-                        {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
-                      </div>
-                      <Button type="submit" disabled={isSubmitting} className="w-full bg-[#BE1E2D] hover:bg-[#a01825] text-white">
-                        {isSubmitting ? t("contact.submitting") : <><Send className="w-4 h-4 mr-2" />{t("contact.submit")}</>}
-                      </Button>
-                    </form>
-                  </div>
+                    </div>
+                    <div>
+                      <label htmlFor="subject" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.subject")} *</label>
+                      <Input id="subject" name="subject" type="text" value={formData.subject} onChange={handleChange} placeholder={t("contact.subjectPlaceholder")} className={errors.subject ? "border-red-500" : ""} />
+                      {errors.subject && <p className="text-red-500 text-xs mt-1">{errors.subject}</p>}
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-[#2b2b2b] mb-2">{t("contact.message")} *</label>
+                      <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder={t("contact.messagePlaceholder")} rows={6} className={errors.message ? "border-red-500" : ""} />
+                      {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
+                    </div>
+                    <Button type="submit" disabled={isSubmitting} className="w-full bg-[#BE1E2D] hover:bg-[#a01825] text-white">
+                      {isSubmitting ? t("contact.submitting") : <><Send className="w-4 h-4 mr-2" />{t("contact.submit")}</>}
+                    </Button>
+                  </form>
                 </div>
               </div>
             </div>

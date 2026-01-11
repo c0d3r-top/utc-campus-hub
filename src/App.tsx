@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Obiective from "./pages/Obiective";
 import Eligibilitate from "./pages/Eligibilitate";
 import CumAplic from "./pages/CumAplic";
+import Echipa from "./pages/Echipa";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/obiective" element={<Obiective />} />
             <Route path="/eligibilitate" element={<Eligibilitate />} />
             <Route path="/cum-aplic" element={<CumAplic />} />
+            <Route path="/echipa" element={<Echipa />} />
             <Route path="/contact" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

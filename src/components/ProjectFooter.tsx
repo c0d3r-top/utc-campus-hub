@@ -1,6 +1,9 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ProjectFooter = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-[#2b2b2b] text-white py-12">
       <div className="container mx-auto px-4">
@@ -12,8 +15,7 @@ const ProjectFooter = () => {
                 IMPACT<span className="text-[#BE1E2D]">+</span>UTCN
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                Proiect finanțat prin Programul Educație și Ocupare (PEO) pentru sprijinirea 
-                studenților cu oportunități reduse în participarea la mobilități Erasmus+.
+                {t("footer.description")}
               </p>
               <div className="flex items-center gap-2">
                 <img 
@@ -21,27 +23,27 @@ const ProjectFooter = () => {
                   alt="EU Flag" 
                   className="h-8"
                 />
-                <span className="text-xs text-gray-400">Cofinanțat de Uniunea Europeană</span>
+                <span className="text-xs text-gray-400">{t("footer.cofinanced")}</span>
               </div>
             </div>
 
             {/* Quick Links */}
             <div>
               <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: 'Roboto, sans-serif' }}>
-                Link-uri Utile
+                {t("footer.usefulLinks")}
               </h3>
               <nav className="flex flex-col gap-2 text-sm">
                 <a href="/obiective" className="text-gray-400 hover:text-white transition-colors">
-                  Obiective
+                  {t("footer.objectives")}
                 </a>
                 <a href="/eligibilitate" className="text-gray-400 hover:text-white transition-colors">
-                  Eligibilitate
+                  {t("footer.eligibility")}
                 </a>
                 <a href="/echipa" className="text-gray-400 hover:text-white transition-colors">
-                  Echipa
+                  {t("footer.team")}
                 </a>
                 <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
+                  {t("footer.contact")}
                 </a>
               </nav>
             </div>
@@ -49,7 +51,7 @@ const ProjectFooter = () => {
             {/* Contact */}
             <div>
               <h3 className="text-lg font-semibold mb-4" style={{ fontFamily: 'Roboto, sans-serif' }}>
-                Contact
+                {t("footer.contact")}
               </h3>
               <div className="space-y-3 text-sm text-gray-400">
                 <div className="flex items-start gap-3">
@@ -72,7 +74,7 @@ const ProjectFooter = () => {
 
           {/* Bottom Bar */}
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-500">
-            <p>© {new Date().getFullYear()} Universitatea Tehnică din Cluj-Napoca. Toate drepturile rezervate.</p>
+            <p>© {new Date().getFullYear()} Universitatea Tehnică din Cluj-Napoca. {t("footer.rights")}</p>
           </div>
         </div>
       </div>

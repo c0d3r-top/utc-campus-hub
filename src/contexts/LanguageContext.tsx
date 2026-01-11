@@ -244,6 +244,11 @@ const translations: Record<Language, Record<string, string>> = {
     "gdpr.contactDesc": "Contactează Biroul pentru Protecția Datelor cu Caracter Personal din UTCN sau Autoritatea Națională de Supraveghere.",
     "gdpr.contactDPO": "Contactează DPO",
     "gdpr.contactANSPDCP": "Contactează ANSPDCP",
+    
+    // Cookies
+    "cookies.message": "Acest site utilizează cookies pentru a îmbunătăți experiența dvs. Continuând să navigați, acceptați utilizarea acestora.",
+    "cookies.learnMore": "Află mai multe",
+    "cookies.accept": "Accept",
   },
   en: {
     // Header
@@ -470,6 +475,11 @@ const translations: Record<Language, Record<string, string>> = {
     "gdpr.contactDesc": "Contact the UTCN Personal Data Protection Office or the National Supervisory Authority.",
     "gdpr.contactDPO": "Contact DPO",
     "gdpr.contactANSPDCP": "Contact ANSPDCP",
+    
+    // Cookies
+    "cookies.message": "This site uses cookies to improve your experience. By continuing to browse, you accept their use.",
+    "cookies.learnMore": "Learn more",
+    "cookies.accept": "Accept",
   },
 };
 

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 
 type Language = "ro" | "en";
 
@@ -7,6 +7,16 @@ interface LanguageContextType {
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
 }
+
+const getInitialLanguage = (): Language => {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('language');
+    if (saved === 'ro' || saved === 'en') {
+      return saved;
+    }
+  }
+  return 'en';
+};
 
 const translations: Record<Language, Record<string, string>> = {
   ro: {
@@ -358,7 +368,19 @@ const translations: Record<Language, Record<string, string>> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    localStorage.setItem('language', lang);
+  };
+
+  useEffect(() => {
+    const saved = localStorage.getItem('language');
+    if (saved === 'ro' || saved === 'en') {
+      setLanguageState(saved);
+    }
+  }, []);
 
   const t = (key: string): string => {
     return translations[language][key] || key;

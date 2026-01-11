@@ -11,6 +11,7 @@ import Eligibilitate from "./pages/Eligibilitate";
 import CumAplic from "./pages/CumAplic";
 import Echipa from "./pages/Echipa";
 import Contact from "./pages/Contact";
+import GDPR from "./pages/GDPR";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/cum-aplic" element={<CumAplic />} />
               <Route path="/echipa" element={<Echipa />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/gdpr" element={<GDPR />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

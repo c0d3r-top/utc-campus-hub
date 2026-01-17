@@ -51,16 +51,23 @@ const Obiective = () => {
                 <h2 className="text-2xl md:text-3xl font-bold text-[#2b2b2b]">{t("objectives.specificTitle")}</h2>
               </div>
               <div className="space-y-4">
-                {[1, 2, 3].map(i => (
-                  <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-8 bg-[#BE1E2D]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-[#BE1E2D] font-bold text-xs">OS{i}</span>
+                {[1, 2, 3].map(i => {
+                  const colors = [
+                    "bg-[#BE1E2D] text-white",
+                    "bg-[#F5A623] text-white", 
+                    "bg-gradient-to-r from-[#BE1E2D] to-[#F5A623] text-white"
+                  ];
+                  return (
+                    <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                      <div className="flex items-start gap-4">
+                        <div className={`px-3 py-2 rounded-lg flex items-center justify-center flex-shrink-0 ${colors[i-1]} shadow-sm`}>
+                          <span className="font-bold text-sm">OS{i}</span>
+                        </div>
+                        <p className="text-[#444] leading-relaxed">{t(`objectives.specific${i}`)}</p>
                       </div>
-                      <p className="text-[#444] leading-relaxed">{t(`objectives.specific${i}`)}</p>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>

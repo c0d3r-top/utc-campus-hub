@@ -5,7 +5,14 @@ import { Users, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const teamMembers = [
-  { name: "Ș.l. dr. ing. Raluca-Diana NERIȘANU", role: "team.projectManager", email: "raluca.nerisanu@campus.utcluj.ro", description: "" },
+  { name: "Ș.l. dr. ing. Raluca-Diana NERIȘANU", role: "team.projectManager", email: "raluca.nerisanu@campus.utcluj.ro" },
+  { name: "Ref. Adriana-Maria CERVINSCHI", role: "team.assistantManager", email: "" },
+  { name: "Jur. Andreea Ioana POPA", role: "team.erasmusExpert", email: "" },
+  { name: "Ildiko Renata PETZ", role: "team.targetGroupResponsible", email: "" },
+  { name: "As. dr. ing. Laura Catinca LEȚIA", role: "team.disabilityFacilitator", email: "" },
+  { name: "Adm. Patrim. SFS Gabriela-Victoria UNGUREAN", role: "team.financialResponsible", email: "" },
+  { name: "Ing. Cristina Loredana PĂRĂUAN", role: "team.publicProcurement", email: "" },
+  { name: "Jur. Liviu Alin CUIBUȘ", role: "team.gdprExpert", email: "" },
 ];
 
 const Echipa = () => {

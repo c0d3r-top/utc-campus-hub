@@ -154,6 +154,13 @@ const translations: Record<Language, Record<string, string>> = {
     "team.aboutP1": "Echipa proiectului IMPACT+UTCN este formată din cadre didactice și personal administrativ al Universității Tehnice din Cluj-Napoca, dedicați sprijinirii studenților cu oportunități reduse în accesarea mobilităților Erasmus+.",
     "team.aboutP2": "Fiecare membru al echipei are responsabilități specifice pentru a asigura implementarea eficientă a proiectului și pentru a oferi suport personalizat studenților eligibili.",
     "team.projectManager": "Manager de Proiect",
+    "team.assistantManager": "Asistent Manager",
+    "team.erasmusExpert": "Expert ERASMUS",
+    "team.targetGroupResponsible": "Responsabil Grup Țintă",
+    "team.disabilityFacilitator": "Facilitator persoane cu dizabilități",
+    "team.financialResponsible": "Responsabil Financiar",
+    "team.publicProcurement": "Responsabil Achiziții Publice",
+    "team.gdprExpert": "Expert GDPR",
     
     // Contact page
     "contact.badge": "Contactează-ne",
@@ -385,6 +392,13 @@ const translations: Record<Language, Record<string, string>> = {
     "team.aboutP1": "The IMPACT+UTCN project team consists of faculty and administrative staff from the Technical University of Cluj-Napoca, dedicated to supporting students with fewer opportunities in accessing Erasmus+ mobilities.",
     "team.aboutP2": "Each team member has specific responsibilities to ensure efficient project implementation and provide personalized support to eligible students.",
     "team.projectManager": "Project Manager",
+    "team.assistantManager": "Assistant Manager",
+    "team.erasmusExpert": "ERASMUS Expert",
+    "team.targetGroupResponsible": "Target Group Responsible",
+    "team.disabilityFacilitator": "Disability Facilitator",
+    "team.financialResponsible": "Financial Responsible",
+    "team.publicProcurement": "Public Procurement Responsible",
+    "team.gdprExpert": "GDPR Expert",
     
     // Contact page
     "contact.badge": "Contact Us",

@@ -54,8 +54,8 @@ const Obiective = () => {
                 {[1, 2, 3].map(i => (
                   <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                     <div className="flex items-start gap-4">
-                      <div className="w-8 h-8 bg-[#BE1E2D]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-[#BE1E2D] font-bold text-sm">{i}</span>
+                      <div className="w-12 h-8 bg-[#BE1E2D]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-[#BE1E2D] font-bold text-xs">OS{i}</span>
                       </div>
                       <p className="text-[#444] leading-relaxed">{t(`objectives.specific${i}`)}</p>
                     </div>

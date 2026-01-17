@@ -1,19 +1,10 @@
-import { Target, CheckCircle, GraduationCap, Globe, Users, Lightbulb, Heart, Briefcase } from "lucide-react";
+import { Target, CheckCircle } from "lucide-react";
 import UTCNHeader from "@/components/UTCNHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Obiective = () => {
   const { t } = useLanguage();
-
-  const competenteList = [
-    { icon: Globe, text: t("objectives.competence1") },
-    { icon: Lightbulb, text: t("objectives.competence2") },
-    { icon: GraduationCap, text: t("objectives.competence3") },
-    { icon: Users, text: t("objectives.competence4") },
-    { icon: Lightbulb, text: t("objectives.competence5") },
-    { icon: Heart, text: t("objectives.competence6") },
-  ];
 
   return (
     <div className="min-h-screen bg-[#f9f9f9] flex flex-col">
@@ -60,37 +51,11 @@ const Obiective = () => {
                 <h2 className="text-2xl md:text-3xl font-bold text-[#2b2b2b]">{t("objectives.specificTitle")}</h2>
               </div>
               <div className="space-y-4">
-                {[1,2,3].map(i => (
+                {[1, 2, 3].map(i => (
                   <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                     <div className="flex items-start gap-4">
                       <div className="w-8 h-8 bg-[#BE1E2D]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                         <span className="text-[#BE1E2D] font-bold text-sm">{i}</span>
-                      </div>
-                      <p className="text-[#444] leading-relaxed">{t(`objectives.specific${i}`)}</p>
-                    </div>
-                  </div>
-                ))}
-                <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-8 h-8 bg-[#BE1E2D]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-[#BE1E2D] font-bold text-sm">4</span>
-                    </div>
-                    <p className="text-[#444] leading-relaxed">{t("objectives.specific4")}</p>
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-4 ml-12">
-                    {competenteList.map((item, index) => (
-                      <div key={index} className="flex items-start gap-3 bg-[#f9f9f9] rounded-lg p-4">
-                        <item.icon className="w-5 h-5 text-[#F5A623] flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-[#444]">{item.text}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                {[5,6].map(i => (
-                  <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                    <div className="flex items-start gap-4">
-                      <div className="w-8 h-8 bg-[#BE1E2D]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        {i === 6 ? <Briefcase className="w-4 h-4 text-[#BE1E2D]" /> : <span className="text-[#BE1E2D] font-bold text-sm">{i}</span>}
                       </div>
                       <p className="text-[#444] leading-relaxed">{t(`objectives.specific${i}`)}</p>
                     </div>

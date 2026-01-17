@@ -5,7 +5,7 @@ import { Users, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const teamMembers = [
-  { name: "Prof. Dr. Raluca Nerisanu", role: "team.projectManager", email: "raluca.nerisanu@campus.utcluj.ro", description: "" },
+  { name: "Ș.l. dr. ing. Raluca-Diana NERIȘANU", role: "team.projectManager", email: "raluca.nerisanu@campus.utcluj.ro", description: "" },
 ];
 
 const Echipa = () => {

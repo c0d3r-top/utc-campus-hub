@@ -76,6 +76,20 @@ const Contact = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
+              {/* Contact Email Info */}
+              <div className="max-w-2xl mx-auto mb-8">
+                <div className="bg-[#BE1E2D]/5 border border-[#BE1E2D]/20 rounded-xl p-6 flex items-center gap-4">
+                  <div className="w-12 h-12 bg-[#BE1E2D] rounded-full flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-[#666] mb-1">{t("contact.email")}</p>
+                    <a href="mailto:impact@utcluj.ro" className="text-lg font-semibold text-[#BE1E2D] hover:underline">
+                      impact@utcluj.ro
+                    </a>
+                  </div>
+                </div>
+              </div>
               <div className="max-w-2xl mx-auto">
                 <div className="bg-[#f9f9f9] rounded-2xl p-8">
                   <h2 className="text-xl font-bold text-[#2b2b2b] mb-6">{t("contact.formTitle")}</h2>

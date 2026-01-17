@@ -76,9 +76,9 @@ const translations: Record<Language, Record<string, string>> = {
     "objectives.generalTitle": "Obiectiv General",
     "objectives.generalDesc": "Creșterea accesului și participării studenților cu oportunități reduse ai UTCN la mobilități educaționale Erasmus+, în vederea îmbunătățirii competențelor profesionale, a șanselor de integrare pe piața muncii și a adaptării la schimbările socio-economice viitoare.",
     "objectives.specificTitle": "Obiective Specifice",
-    "objectives.specific1": "OS1. Identificarea, selecția și monitorizarea studenților cu oportunități reduse pentru a asigura participarea și finalizarea cu succes a activităților proiectului.",
-    "objectives.specific2": "OS2. Creșterea accesului studenților cu oportunități reduse la mobilități Erasmus+ prin acordarea unui sprijin financiar suplimentar.",
-    "objectives.specific3": "OS3. Creșterea interesului pentru mobilitățile Erasmus+ prin activități de informare, promovare și valorificare a rezultatelor, inclusiv seminarii și campanii de comunicare.",
+    "objectives.specific1": "Identificarea, selecția și monitorizarea studenților cu oportunități reduse pentru a asigura participarea și finalizarea cu succes a activităților proiectului.",
+    "objectives.specific2": "Creșterea accesului studenților cu oportunități reduse la mobilități Erasmus+ prin acordarea unui sprijin financiar suplimentar.",
+    "objectives.specific3": "Creșterea interesului pentru mobilitățile Erasmus+ prin activități de informare, promovare și valorificare a rezultatelor, inclusiv seminarii și campanii de comunicare.",
     
     // Eligibility page
     "eligibility.badge": "Criterii de Eligibilitate",
@@ -305,9 +305,9 @@ const translations: Record<Language, Record<string, string>> = {
     "objectives.generalTitle": "General Objective",
     "objectives.generalDesc": "Increasing access and participation of UTCN students with fewer opportunities in Erasmus+ educational mobilities, to improve professional skills, labor market integration chances, and adaptation to future socio-economic changes.",
     "objectives.specificTitle": "Specific Objectives",
-    "objectives.specific1": "OS1. Identification, selection, and monitoring of students with fewer opportunities to ensure participation and successful completion of project activities.",
-    "objectives.specific2": "OS2. Increasing access of students with fewer opportunities to Erasmus+ mobilities by providing additional financial support.",
-    "objectives.specific3": "OS3. Increasing interest in Erasmus+ mobilities through information, promotion, and valorization of results, including seminars and communication campaigns.",
+    "objectives.specific1": "Identification, selection, and monitoring of students with fewer opportunities to ensure participation and successful completion of project activities.",
+    "objectives.specific2": "Increasing access of students with fewer opportunities to Erasmus+ mobilities by providing additional financial support.",
+    "objectives.specific3": "Increasing interest in Erasmus+ mobilities through information, promotion, and valorization of results, including seminars and communication campaigns.",
     
     // Eligibility page
     "eligibility.badge": "Eligibility Criteria",

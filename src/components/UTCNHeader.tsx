@@ -14,7 +14,7 @@ const UTCNHeader = () => {
   ];
 
   return (
-    <header className="w-full">
+    <header className="w-full sticky top-0 z-50">
       {/* Top Bar - Gray */}
       <div className="bg-[#f5f5f5] border-b border-[#e0e0e0]">
         <div className="container mx-auto px-4">

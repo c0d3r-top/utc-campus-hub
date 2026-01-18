@@ -13,17 +13,9 @@ const ProjectFooter = () => {
               <h3 className="text-xl font-bold mb-4" style={{ fontFamily: 'Roboto, sans-serif' }}>
                 IMPACT<span className="text-[#BE1E2D]">+</span>UTCN
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              <p className="text-gray-400 text-sm leading-relaxed">
                 {t("footer.description")}
               </p>
-              <div className="flex items-center gap-2">
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" 
-                  alt="EU Flag" 
-                  className="h-8"
-                />
-                <span className="text-xs text-gray-400">{t("footer.cofinanced")}</span>
-              </div>
             </div>
 
             {/* Quick Links */}

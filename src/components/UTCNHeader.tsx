@@ -2,7 +2,7 @@ import { Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import euFundedLogo from "@/assets/eu-funded-logo.png";
-import guvernulRomanieiLogo from "@/assets/guvernul-romaniei-logo.png";
+import guvernulRomanieiLogo from "@/assets/guvernul-romaniei-logo.svg";
 import eutLogo from "@/assets/eut_logo.png";
 
 const UTCNHeader = () => {

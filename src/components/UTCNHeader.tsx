@@ -1,6 +1,7 @@
 import { Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import euFundedLogo from "@/assets/eu-funded-logo.png";
 import logoSite from "@/assets/logo_site.png";
 import eutLogo from "@/assets/eut_logo.png";
 
@@ -50,11 +51,11 @@ const UTCNHeader = () => {
           <div className="flex items-center justify-between">
             {/* Left - UTCN Logo + EUT+ */}
             <div className="flex items-center gap-4">
-              {/* UTCN Logo */}
+              {/* EU Funded Logo */}
               <a href="/" className="flex items-center">
                 <img 
-                  src={logoSite} 
-                  alt="Universitatea Tehnică din Cluj-Napoca" 
+                  src={euFundedLogo} 
+                  alt="Finanțat de Uniunea Europeană" 
                   className="h-12 sm:h-14 w-auto"
                 />
               </a>

@@ -2,7 +2,7 @@ import { Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import euFundedLogo from "@/assets/eu-funded-logo.png";
-import logoSite from "@/assets/logo_site.png";
+import guvernulRomanieiLogo from "@/assets/guvernul-romaniei-logo.png";
 import eutLogo from "@/assets/eut_logo.png";
 
 const UTCNHeader = () => {
@@ -63,11 +63,11 @@ const UTCNHeader = () => {
               {/* Separator */}
               <div className="w-px h-10 bg-[#ddd] mx-2 hidden lg:block"></div>
 
-              {/* EUT+ Logo */}
+              {/* Guvernul României Logo */}
               <div className="hidden lg:block">
                 <img 
-                  src={eutLogo} 
-                  alt="European University of Technology" 
+                  src={guvernulRomanieiLogo} 
+                  alt="Guvernul României" 
                   className="h-12 w-auto"
                 />
               </div>

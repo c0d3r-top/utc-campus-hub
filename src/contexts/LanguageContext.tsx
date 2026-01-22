@@ -342,7 +342,7 @@ const translations: Record<Language, Record<string, string>> = {
     "howToApply.condition2": "Participate in an ERASMUS+ mobility",
     "howToApply.condition3": "Participate in at least one project activity",
     "howToApply.condition4": "Have signed the mobility scholarship award contract",
-    "howToApply.contractNote": "For the mobility scholarship award, each participant will sign a contract with UTC-N, as the Project Beneficiary, whereby the student assumes compliance with the conditions for awarding the mobility scholarship offered through the project.",
+    "howToApply.contractNote": "For the mobility scholarship award, each participant will sign a contract with TUC-N, as the Project Beneficiary, whereby the student assumes compliance with the conditions for awarding the mobility scholarship offered through the project.",
     "howToApply.documentsTitle": "Documents for Project Enrollment",
     "howToApply.documentsIntro": "For registration in the project's target group, interested students will submit the following documents:",
     "howToApply.doc1": "Project registration application – online form",

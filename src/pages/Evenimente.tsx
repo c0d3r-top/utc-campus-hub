@@ -1,9 +1,12 @@
-import { Calendar, MapPin, Clock, Users, ChevronRight, Video } from "lucide-react";
+import { Calendar, MapPin, Clock, Users, ChevronRight, Video, QrCode } from "lucide-react";
 import UTCNHeader from "@/components/UTCNHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
+
+const EVENTS_PAGE_URL = "https://utc-campus-hub.lovable.app/evenimente";
 
 const Evenimente = () => {
   const { t } = useLanguage();
@@ -190,6 +193,26 @@ const Evenimente = () => {
                           <span className="text-[#666]">{t("events.type.deadline")}</span>
                         </div>
                       </div>
+                    </div>
+
+                    {/* QR Code */}
+                    <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mt-4">
+                      <h3 className="text-sm font-semibold text-[#2b2b2b] mb-3 flex items-center gap-2">
+                        <QrCode className="w-4 h-4 text-[#BE1E2D]" />
+                        {t("events.qrTitle")}
+                      </h3>
+                      <div className="flex justify-center p-4 bg-white rounded-lg">
+                        <QRCodeSVG 
+                          value={EVENTS_PAGE_URL}
+                          size={140}
+                          level="M"
+                          fgColor="#2b2b2b"
+                          bgColor="#ffffff"
+                        />
+                      </div>
+                      <p className="text-xs text-center text-[#888] mt-3">
+                        {t("events.qrDesc")}
+                      </p>
                     </div>
                   </div>
                 </div>

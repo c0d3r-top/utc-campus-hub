@@ -269,6 +269,8 @@ const translations: Record<Language, Record<string, string>> = {
     "events.ctaDesc": "Contactează-ne pentru a primi notificări despre evenimentele viitoare.",
     "events.ctaButton": "Contactează-ne",
     "events.joinMeeting": "Participă la întâlnire",
+    "events.qrTitle": "Cod QR",
+    "events.qrDesc": "Scanează pentru a accesa pagina Evenimente",
 
     // Cookies
     "cookies.message": "Acest site utilizează cookies pentru a îmbunătăți experiența dvs. Continuând să navigați, acceptați utilizarea acestora.",
@@ -525,6 +527,8 @@ const translations: Record<Language, Record<string, string>> = {
     "events.ctaDesc": "Contact us to receive notifications about upcoming events.",
     "events.ctaButton": "Contact Us",
     "events.joinMeeting": "Join Meeting",
+    "events.qrTitle": "QR Code",
+    "events.qrDesc": "Scan to access the Events page",
 
     // Cookies
     "cookies.message": "This site uses cookies to improve your experience. By continuing to browse, you accept their use.",

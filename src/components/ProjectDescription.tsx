@@ -14,9 +14,9 @@ const ProjectDescription = () => {
             {t("projectDesc.title")}
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-10 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Text content */}
-            <div className="space-y-6 text-[#444] leading-relaxed text-center lg:text-left flex flex-col justify-center h-full" style={{ fontFamily: 'Roboto, sans-serif' }}>
+            <div className="space-y-6 text-[#444] leading-relaxed text-justify" style={{ fontFamily: 'Roboto, sans-serif' }}>
               <p>
                 {t("projectDesc.p1").split("IMPACT+UTCN").map((part, i, arr) => 
                   i < arr.length - 1 ? (

@@ -1,4 +1,4 @@
-import { Menu, X, User } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import euFundedLogo from "@/assets/eu-funded-logo.png";
@@ -88,15 +88,6 @@ const UTCNHeader = () => {
                 ))}
               </nav>
 
-              {/* Auth Button */}
-              <a
-                href="#autentificare"
-                className="hidden md:flex items-center gap-2 bg-[#BE1E2D] text-white px-4 py-2 text-sm font-medium hover:bg-[#a01825] transition-colors rounded-md"
-              >
-                <User className="w-4 h-4" />
-                <span>{t("header.login")}</span>
-              </a>
-
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -124,14 +115,6 @@ const UTCNHeader = () => {
                   {item.label}
                 </a>
               ))}
-              <a
-                href="#autentificare"
-                onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2 mt-2 bg-[#BE1E2D] text-white px-4 py-3 text-sm font-medium hover:bg-[#a01825] transition-colors rounded-md justify-center"
-              >
-                <User className="w-4 h-4" />
-                <span>{t("header.login")}</span>
-              </a>
             </nav>
           </div>
         </div>

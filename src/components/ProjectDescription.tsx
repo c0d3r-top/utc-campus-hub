@@ -60,9 +60,6 @@ const ProjectDescription = () => {
                   alt="Afiș IMPACT+UTCN - Incluziune, Mobilitate, Participare, Acces și Comunitate Erasmus+ pentru Tinerii din UTCN" 
                   className="w-full max-w-md rounded-lg"
                 />
-                <p className="text-center text-sm text-[#666] mt-3 font-medium">
-                  Afișul oficial al proiectului
-                </p>
                 <a 
                   href={afisProiect} 
                   download="Afis-IMPACT-UTCN.png"

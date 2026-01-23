@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Clock, Users, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, Clock, Users, ChevronRight, Video } from "lucide-react";
 import UTCNHeader from "@/components/UTCNHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -18,7 +18,8 @@ const Evenimente = () => {
       date: "2026-01-28",
       time: "11:00",
       locationKey: "events.event1Location",
-      type: "info"
+      type: "info",
+      meetingLink: "https://teams.microsoft.com/meet/31560641977205?p=W5CkLN4VxGYSUXTuOo"
     },
   ];
 
@@ -125,6 +126,17 @@ const Evenimente = () => {
                                 <span>{t(event.locationKey)}</span>
                               </div>
                             </div>
+                            {event.meetingLink && (
+                              <a
+                                href={event.meetingLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-[#5059C9] text-white text-sm font-medium rounded-lg hover:bg-[#4048b8] transition-colors"
+                              >
+                                <Video className="w-4 h-4" />
+                                {t("events.joinMeeting")}
+                              </a>
+                            )}
                           </div>
 
                           {/* Arrow */}

@@ -35,6 +35,7 @@ const ImpactHero = () => {
               </div>
               <h3 className="font-semibold text-[#2b2b2b] mb-2">{t("hero.financialSupport")}</h3>
               <p className="text-sm text-[#666]">{t("hero.financialSupportDesc")}</p>
+              <p className="text-sm font-bold text-[#BE1E2D] mt-2">{t("hero.financialSupportAmount")}</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">

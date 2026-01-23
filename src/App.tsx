@@ -15,6 +15,7 @@ import Evenimente from "./pages/Evenimente";
 import Echipa from "./pages/Echipa";
 import Contact from "./pages/Contact";
 import GDPR from "./pages/GDPR";
+import QRCodeGenerator from "./pages/QRCodeGenerator";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/echipa" element={<Echipa />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/gdpr" element={<GDPR />} />
+              <Route path="/qr-evenimente" element={<QRCodeGenerator />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

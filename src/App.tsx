@@ -11,6 +11,7 @@ import Index from "./pages/Index";
 import Obiective from "./pages/Obiective";
 import Eligibilitate from "./pages/Eligibilitate";
 import CumAplic from "./pages/CumAplic";
+import Evenimente from "./pages/Evenimente";
 import Echipa from "./pages/Echipa";
 import Contact from "./pages/Contact";
 import GDPR from "./pages/GDPR";
@@ -31,6 +32,7 @@ const App = () => (
               <Route path="/obiective" element={<Obiective />} />
               <Route path="/eligibilitate" element={<Eligibilitate />} />
               <Route path="/cum-aplic" element={<CumAplic />} />
+              <Route path="/evenimente" element={<Evenimente />} />
               <Route path="/echipa" element={<Echipa />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/gdpr" element={<GDPR />} />

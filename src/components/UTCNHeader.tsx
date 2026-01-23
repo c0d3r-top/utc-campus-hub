@@ -12,6 +12,7 @@ const UTCNHeader = () => {
   const menuItems = [
     { label: t("header.aboutUs"), href: "/" },
     { label: t("header.howToApply"), href: "/cum-aplic" },
+    { label: t("header.events"), href: "/evenimente" },
   ];
 
   return (

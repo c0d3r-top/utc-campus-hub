@@ -15,28 +15,10 @@ const Evenimente = () => {
       id: 1,
       titleKey: "events.event1Title",
       descKey: "events.event1Desc",
-      date: "2026-02-15",
-      time: "10:00 - 12:00",
+      date: "2026-01-28",
+      time: "11:00",
       locationKey: "events.event1Location",
       type: "info"
-    },
-    {
-      id: 2,
-      titleKey: "events.event2Title",
-      descKey: "events.event2Desc",
-      date: "2026-03-10",
-      time: "14:00 - 16:00",
-      locationKey: "events.event2Location",
-      type: "workshop"
-    },
-    {
-      id: 3,
-      titleKey: "events.event3Title",
-      descKey: "events.event3Desc",
-      date: "2026-04-05",
-      time: "09:00 - 17:00",
-      locationKey: "events.event3Location",
-      type: "deadline"
     },
   ];
 

@@ -1,4 +1,5 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import afisProiect from "@/assets/afis-proiect-impact.png";
 
@@ -62,6 +63,16 @@ const ProjectDescription = () => {
                 <p className="text-center text-sm text-[#666] mt-3 font-medium">
                   Afișul oficial al proiectului
                 </p>
+                <a 
+                  href={afisProiect} 
+                  download="Afis-IMPACT-UTCN.png"
+                  className="block mt-4"
+                >
+                  <Button className="w-full bg-[#BE1E2D] hover:bg-[#a01825] text-white">
+                    <Download className="w-4 h-4 mr-2" />
+                    Descarcă afișul (PNG)
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

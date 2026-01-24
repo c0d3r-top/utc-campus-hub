@@ -20,7 +20,7 @@ const Index = () => {
         <ProjectContext />
         
         {/* QR Code Button - Fixed position */}
-        <div className="fixed bottom-6 right-6 z-50">
+        <div className="fixed bottom-6 right-24 z-50">
           <Link to="/qr-evenimente">
             <Button 
               className="bg-[#BE1E2D] hover:bg-[#a01825] text-white shadow-lg rounded-full w-14 h-14 p-0"

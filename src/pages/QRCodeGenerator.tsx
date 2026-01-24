@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const EVENTS_PAGE_URL = "https://utc-campus-hub.lovable.app/evenimente";
+const EVENTS_PAGE_URL = "https://impact.utcluj.ro/evenimente";
 
 const QRCodeGenerator = () => {
   const canvasRef = useRef<HTMLDivElement>(null);

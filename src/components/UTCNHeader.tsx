@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import euFundedLogo from "@/assets/eu-funded-logo.png";
+import cofinantatEuLogo from "@/assets/cofinantat-eu-logo.png";
 import guvernulRomanieiLogo from "@/assets/guvernul-romaniei-logo.svg";
 import eutLogo from "@/assets/eut_logo.png";
 
@@ -55,8 +55,8 @@ const UTCNHeader = () => {
               {/* EU Funded Logo */}
               <a href="/" className="flex items-center">
                 <img 
-                  src={euFundedLogo} 
-                  alt="Finanțat de Uniunea Europeană" 
+                  src={cofinantatEuLogo} 
+                  alt="Cofinanțat de Uniunea Europeană" 
                   className="h-12 sm:h-14 w-auto"
                 />
               </a>

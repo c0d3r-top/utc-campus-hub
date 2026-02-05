@@ -37,15 +37,7 @@ const CumAplic = () => {
                   <div className="flex-1 text-center md:text-left">
                     <h2 className="text-2xl md:text-3xl font-bold text-[#2b2b2b] mb-4">{t("howToApply.preApplicationTitle")}</h2>
                     <p className="text-[#666] mb-6">{t("howToApply.preApplicationDesc")}</p>
-                    <a 
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSfExample/viewform" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-[#BE1E2D] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#a01825] transition-colors shadow-md"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                      {t("howToApply.preApplicationButton")}
-                    </a>
+                    <p className="text-[#BE1E2D] font-medium text-lg">{t("howToApply.scanQRInstruction")}</p>
                   </div>
                   <div className="flex-shrink-0">
                     <div className="bg-white rounded-xl p-4 shadow-md border border-gray-200">

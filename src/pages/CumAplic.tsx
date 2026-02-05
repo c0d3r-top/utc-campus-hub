@@ -28,7 +28,42 @@ const CumAplic = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        {/* Pre-Application Form Section - at top for visibility */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-br from-[#BE1E2D]/5 via-white to-[#F5A623]/5 rounded-2xl shadow-lg p-8 md:p-10 border border-gray-100">
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="flex-1 text-center md:text-left">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#2b2b2b] mb-4">{t("howToApply.preApplicationTitle")}</h2>
+                    <p className="text-[#666] mb-6">{t("howToApply.preApplicationDesc")}</p>
+                    <a 
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfExample/viewform" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-[#BE1E2D] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#a01825] transition-colors shadow-md"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                      {t("howToApply.preApplicationButton")}
+                    </a>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <div className="bg-white rounded-xl p-4 shadow-md border border-gray-200">
+                      <img 
+                        src={qrPreaplicatie} 
+                        alt="QR Code - Chestionar pre-aplicație" 
+                        className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-lg"
+                      />
+                      <p className="text-center text-sm text-[#666] mt-2">{t("howToApply.scanQR")}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-[#f9f9f9]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center gap-3 mb-6">
@@ -56,7 +91,7 @@ const CumAplic = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-[#f9f9f9]">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center gap-3 mb-6">
@@ -66,7 +101,7 @@ const CumAplic = () => {
               <p className="text-[#666] mb-8">{t("howToApply.documentsIntro")}</p>
               <div className="space-y-3">
                 {documenteInscriere.map((document, index) => (
-                  <div key={index} className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                  <div key={index} className="bg-[#f9f9f9] rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                     <div className="flex items-start gap-3">
                       <div className="w-7 h-7 bg-[#BE1E2D]/10 rounded-full flex items-center justify-center flex-shrink-0"><span className="text-[#BE1E2D] font-bold text-xs">{index + 1}</span></div>
                       <p className="text-[#444] text-sm leading-relaxed">{document}</p>
@@ -78,7 +113,7 @@ const CumAplic = () => {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-[#f9f9f9]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center gap-3 mb-6">
@@ -88,48 +123,13 @@ const CumAplic = () => {
               <p className="text-[#666] mb-6 text-sm">{t("howToApply.reducedOpportunitiesIntro")}</p>
               <div className="grid md:grid-cols-2 gap-3">
                 {documenteOportunitatiReduse.map((document, index) => (
-                  <div key={index} className="bg-[#f9f9f9] rounded-lg p-4 border border-gray-200">
+                  <div key={index} className="bg-white rounded-lg p-4 border border-gray-200">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-4 h-4 text-[#F5A623] flex-shrink-0 mt-1" />
                       <p className="text-[#444] text-sm leading-relaxed">{document}</p>
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Pre-Application Form Section */}
-        <section className="py-16 bg-gradient-to-br from-[#BE1E2D]/5 via-white to-[#F5A623]/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 border border-gray-100">
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  <div className="flex-1 text-center md:text-left">
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#2b2b2b] mb-4">{t("howToApply.preApplicationTitle")}</h2>
-                    <p className="text-[#666] mb-6">{t("howToApply.preApplicationDesc")}</p>
-                    <a 
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSfExample/viewform" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-[#BE1E2D] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#a01825] transition-colors shadow-md"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                      {t("howToApply.preApplicationButton")}
-                    </a>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <div className="bg-white rounded-xl p-4 shadow-md border border-gray-200">
-                      <img 
-                        src={qrPreaplicatie} 
-                        alt="QR Code - Chestionar pre-aplicație" 
-                        className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-lg"
-                      />
-                      <p className="text-center text-sm text-[#666] mt-2">{t("howToApply.scanQR")}</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

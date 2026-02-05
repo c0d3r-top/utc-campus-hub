@@ -48,12 +48,12 @@ const ProjectFooter = () => {
             <p>
               {t("footer.mfeInfo")}{" "}
               <a 
-                href="https://www.mfe.gov.ro" 
+                href="https://mfe.gov.ro/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white hover:text-[#BE1E2D] underline transition-colors"
               >
-                www.mfe.gov.ro
+                https://mfe.gov.ro/
               </a>
             </p>
           </div>

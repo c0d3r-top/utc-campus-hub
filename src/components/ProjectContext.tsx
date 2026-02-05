@@ -70,12 +70,12 @@ const ProjectContext = () => {
             <p className="text-[#666] text-sm">
               {t("projectContext.mfeInfo")}{" "}
               <a 
-                href="https://www.mfe.gov.ro" 
+                href="https://mfe.gov.ro/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[#BE1E2D] hover:underline font-medium"
               >
-                www.mfe.gov.ro
+                https://mfe.gov.ro/
               </a>
             </p>
           </div>

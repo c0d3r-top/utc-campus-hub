@@ -36,6 +36,7 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.contact": "Contact",
     "footer.gdpr": "Protecția Datelor (GDPR)",
     "footer.rights": "Toate drepturile rezervate.",
+    "footer.mfeInfo": "Pentru informații detaliate despre celelalte programe cofinanțate de Uniunea Europeană, vă invităm să vizitați",
     
     // Hero
     "hero.badge": "Program Erasmus+",
@@ -70,6 +71,7 @@ const translations: Record<Language, Record<string, string>> = {
     "projectContext.target23": "Până în anul 2030, cel puțin 23% dintre absolvenții de învățământ superior să aibă o experiență de mobilitate educațională",
     "projectContext.target20": "Cel puțin 20% dintre beneficiarii mobilităților educaționale să fie persoane cu oportunități reduse",
     "projectContext.nationalProgram": "Prin activitățile implementate, proiectul susține totodată Prioritatea 3.7 'Educație și competențe' din Programul Național de Reformă 2024, contribuind la incluziunea socială, internaționalizarea educației și creșterea calității formării profesionale.",
+    "projectContext.mfeInfo": "Pentru informații detaliate despre celelalte programe cofinanțate de Uniunea Europeană, vă invităm să vizitați",
     
     // Objectives page
     "objectives.badge": "Obiectivele Proiectului",
@@ -294,6 +296,7 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.contact": "Contact",
     "footer.gdpr": "Data Protection (GDPR)",
     "footer.rights": "All rights reserved.",
+    "footer.mfeInfo": "For detailed information about other programs co-financed by the European Union, please visit",
     
     // Hero
     "hero.badge": "Erasmus+ Program",
@@ -328,6 +331,7 @@ const translations: Record<Language, Record<string, string>> = {
     "projectContext.target23": "By 2030, at least 23% of higher education graduates should have an educational mobility experience",
     "projectContext.target20": "At least 20% of educational mobility beneficiaries should be people with fewer opportunities",
     "projectContext.nationalProgram": "Through the implemented activities, the project also supports Priority 3.7 \"Education and Skills\" from the 2024 National Reform Program, contributing to social inclusion, education internationalization, and increasing the quality of professional training.",
+    "projectContext.mfeInfo": "For detailed information about other programs co-financed by the European Union, please visit",
     
     // Objectives page
     "objectives.badge": "Project Objectives",

@@ -43,8 +43,23 @@ const ProjectFooter = () => {
             </div>
           </div>
 
+          {/* MFE Link */}
+          <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
+            <p>
+              {t("footer.mfeInfo")}{" "}
+              <a 
+                href="https://www.mfe.gov.ro" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#BE1E2D] underline transition-colors"
+              >
+                www.mfe.gov.ro
+              </a>
+            </p>
+          </div>
+
           {/* Bottom Bar */}
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-500">
+          <div className="border-t border-gray-700 mt-6 pt-6 text-center text-sm text-gray-500">
             <p>© {new Date().getFullYear()} Universitatea Tehnică din Cluj-Napoca. {t("footer.rights")}</p>
           </div>
         </div>

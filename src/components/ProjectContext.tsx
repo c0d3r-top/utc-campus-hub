@@ -64,6 +64,21 @@ const ProjectContext = () => {
           <div className="mt-8 p-6 bg-gradient-to-r from-[#BE1E2D]/5 to-[#F5A623]/5 rounded-xl border border-[#BE1E2D]/10">
             <p className="text-[#444] text-sm leading-relaxed">{t("projectContext.nationalProgram")}</p>
           </div>
+
+          {/* MFE Link */}
+          <div className="mt-6 p-4 bg-white rounded-lg border border-gray-200 text-center">
+            <p className="text-[#666] text-sm">
+              {t("projectContext.mfeInfo")}{" "}
+              <a 
+                href="https://www.mfe.gov.ro" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#BE1E2D] hover:underline font-medium"
+              >
+                www.mfe.gov.ro
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,8 @@
-import { FileText, CheckCircle, ClipboardList, Upload, AlertCircle } from "lucide-react";
+import { FileText, CheckCircle, ClipboardList, Upload, AlertCircle, ExternalLink } from "lucide-react";
 import UTCNHeader from "@/components/UTCNHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 import { useLanguage } from "@/contexts/LanguageContext";
+import qrPreaplicatie from "@/assets/qr-preaplicatie.jpeg";
 
 const CumAplic = () => {
   const { t } = useLanguage();
@@ -94,6 +95,41 @@ const CumAplic = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pre-Application Form Section */}
+        <section className="py-16 bg-gradient-to-br from-[#BE1E2D]/5 via-white to-[#F5A623]/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 border border-gray-100">
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  <div className="flex-1 text-center md:text-left">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#2b2b2b] mb-4">{t("howToApply.preApplicationTitle")}</h2>
+                    <p className="text-[#666] mb-6">{t("howToApply.preApplicationDesc")}</p>
+                    <a 
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfExample/viewform" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-[#BE1E2D] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#a01825] transition-colors shadow-md"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                      {t("howToApply.preApplicationButton")}
+                    </a>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <div className="bg-white rounded-xl p-4 shadow-md border border-gray-200">
+                      <img 
+                        src={qrPreaplicatie} 
+                        alt="QR Code - Chestionar pre-aplicație" 
+                        className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-lg"
+                      />
+                      <p className="text-center text-sm text-[#666] mt-2">{t("howToApply.scanQR")}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

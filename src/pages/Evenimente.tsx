@@ -21,6 +21,15 @@ const Evenimente = () => {
       type: "info",
       meetingLink: "https://teams.microsoft.com/meet/31560641977205?p=W5CkLN4VxGYSUXTuOo"
     },
+    {
+      id: 2,
+      titleKey: "events.event2Title",
+      descKey: "events.event2Desc",
+      date: "2026-03-16",
+      time: "15:45",
+      locationKey: "events.event2Location",
+      type: "info",
+    },
   ];
 
   const getEventTypeColor = (type: string) => {

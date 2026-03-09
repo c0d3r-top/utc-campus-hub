@@ -260,6 +260,7 @@ const translations: Record<Language, Record<string, string>> = {
     "events.legend": "Legendă",
     "events.noEvents": "Nu există evenimente programate momentan.",
     "events.type.info": "Sesiune informativă",
+    "events.type.promotion": "Informare/Promovare",
     "events.type.workshop": "Workshop",
     "events.type.deadline": "Termen limită",
     "events.event1Title": "Lansarea proiectului IMPACT+UTCN",

@@ -36,6 +36,8 @@ const Evenimente = () => {
     switch (type) {
       case "info":
         return "bg-blue-500";
+      case "promotion":
+        return "bg-green-500";
       case "workshop":
         return "bg-[#F5A623]";
       case "deadline":

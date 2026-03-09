@@ -531,7 +531,7 @@ const translations: Record<Language, Record<string, string>> = {
     "events.event1Title": "IMPACT+UTCN Project Launch",
     "events.event1Desc": "General presentation of the project and mobility opportunities for students with fewer opportunities.",
     "events.event1Location": "Online",
-    "events.event2Title": "IMPACT+UTCN Promotion Seminar",
+    "events.event2Title": "IMPACT+UTCN Project Promotion Seminar",
     "events.event2Desc": "Seminar dedicated to promoting the IMPACT+UTCN project and the mobility opportunities offered to students.",
     "events.event2Location": "Room P09 (relaxation room, former BT)",
     "events.event3Title": "Application Deadline - Session 1",

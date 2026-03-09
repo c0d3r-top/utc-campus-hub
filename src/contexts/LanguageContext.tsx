@@ -266,7 +266,7 @@ const translations: Record<Language, Record<string, string>> = {
     "events.event1Title": "Lansarea proiectului IMPACT+UTCN",
     "events.event1Desc": "Prezentare generală a proiectului și a oportunităților de mobilitate pentru studenții cu oportunități reduse.",
     "events.event1Location": "Online",
-    "events.event2Title": "Seminar de promovare IMPACT+UTCN",
+    "events.event2Title": "Seminar de promovare proiect IMPACT+UTCN",
     "events.event2Desc": "Seminar dedicat promovării proiectului IMPACT+UTCN și a oportunităților de mobilitate oferite studenților.",
     "events.event2Location": "Sala P09 (sală de relaxare, fosta BT)",
     "events.event3Title": "Termen limită înscrieri - Sesiunea 1",

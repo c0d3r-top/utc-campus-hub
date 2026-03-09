@@ -28,7 +28,7 @@ const Evenimente = () => {
       date: "2026-03-16",
       time: "15:45",
       locationKey: "events.event2Location",
-      type: "info",
+      type: "promotion",
     },
   ];
 

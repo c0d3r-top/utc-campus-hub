@@ -525,6 +525,7 @@ const translations: Record<Language, Record<string, string>> = {
     "events.legend": "Legend",
     "events.noEvents": "No events scheduled at the moment.",
     "events.type.info": "Info Session",
+    "events.type.promotion": "Information/Promotion",
     "events.type.workshop": "Workshop",
     "events.type.deadline": "Deadline",
     "events.event1Title": "IMPACT+UTCN Project Launch",

@@ -193,6 +193,10 @@ const Evenimente = () => {
                           <span className="text-[#666]">{t("events.type.info")}</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
+                          <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                          <span className="text-[#666]">{t("events.type.promotion")}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
                           <span className="w-3 h-3 rounded-full bg-[#F5A623]"></span>
                           <span className="text-[#666]">{t("events.type.workshop")}</span>
                         </div>

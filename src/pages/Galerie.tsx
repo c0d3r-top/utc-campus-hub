@@ -7,16 +7,16 @@ const Galerie = () => {
   const { t } = useLanguage();
 
   const photos = [
-    "/galerie/foto-1.jpg",
-    "/galerie/foto-2.jpg",
-    "/galerie/foto-3.jpg",
-    "/galerie/foto-4.jpg",
-    "/galerie/foto-5.jpg",
-    "/galerie/foto-6.jpg",
-    "/galerie/foto-7.jpg",
-    "/galerie/foto-8.jpg",
-    "/galerie/foto-9.jpg",
-    "/galerie/foto-10.jpg",
+    "/media/foto-1.jpg",
+    "/media/foto-2.jpg",
+    "/media/foto-3.jpg",
+    "/media/foto-4.jpg",
+    "/media/foto-5.jpg",
+    "/media/foto-6.jpg",
+    "/media/foto-7.jpg",
+    "/media/foto-8.jpg",
+    "/media/foto-9.jpg",
+    "/media/foto-10.jpg",
   ];
 
   return (

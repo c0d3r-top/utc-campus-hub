@@ -29,6 +29,7 @@ const Evenimente = () => {
       time: "15:45",
       locationKey: "events.event2Location",
       type: "promotion",
+      link: "/galerie",
     },
     {
       id: 3,

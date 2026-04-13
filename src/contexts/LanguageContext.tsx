@@ -283,6 +283,13 @@ const translations: Record<Language, Record<string, string>> = {
     "events.qrTitle": "Cod QR",
     "events.qrDesc": "Scanează pentru a accesa pagina Evenimente",
 
+    // Gallery
+    "gallery.badge": "Galerie Foto",
+    "gallery.title": "Seminar de promovare proiect IMPACT+UTCN",
+    "gallery.subtitle": "Fotografii de la seminarul de promovare a proiectului IMPACT+UTCN din 16 martie 2026.",
+    "gallery.noPhotos": "Fotografiile vor fi disponibile în curând",
+    "gallery.comingSoon": "Reveniti pentru a vedea galeria foto de la eveniment.",
+
     // Cookies
     "cookies.message": "Acest site utilizează cookies pentru a îmbunătăți experiența dvs. Continuând să navigați, acceptați utilizarea acestora.",
     "cookies.learnMore": "Află mai multe",
@@ -551,6 +558,13 @@ const translations: Record<Language, Record<string, string>> = {
     "events.joinMeeting": "Join Meeting",
     "events.qrTitle": "QR Code",
     "events.qrDesc": "Scan to access the Events page",
+
+    // Gallery
+    "gallery.badge": "Photo Gallery",
+    "gallery.title": "IMPACT+UTCN Project Promotion Seminar",
+    "gallery.subtitle": "Photos from the IMPACT+UTCN project promotion seminar on March 16, 2026.",
+    "gallery.noPhotos": "Photos will be available soon",
+    "gallery.comingSoon": "Come back to see the event photo gallery.",
 
     // Cookies
     "cookies.message": "This site uses cookies to improve your experience. By continuing to browse, you accept their use.",

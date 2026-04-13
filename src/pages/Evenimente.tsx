@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Clock, Users, ChevronRight, Video } from "lucide-react";
+import { Calendar, MapPin, Clock, Users, ChevronRight, Video, Images } from "lucide-react";
 import UTCNHeader from "@/components/UTCNHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -29,6 +29,7 @@ const Evenimente = () => {
       time: "15:45",
       locationKey: "events.event2Location",
       type: "promotion",
+      link: "/galerie",
     },
     {
       id: 3,
@@ -104,66 +105,78 @@ const Evenimente = () => {
                   </div>
 
                   <div className="space-y-4">
-                    {upcomingEvents.map((event) => (
-                      <div
-                        key={event.id}
-                        className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all group"
-                      >
-                        <div className="flex items-start gap-4">
-                          {/* Date Badge */}
-                          <div className="flex-shrink-0 text-center">
-                            <div className="w-16 h-16 bg-[#BE1E2D]/10 rounded-lg flex flex-col items-center justify-center">
-                              <span className="text-2xl font-bold text-[#BE1E2D]">
-                                {new Date(event.date).getDate()}
-                              </span>
-                              <span className="text-xs text-[#BE1E2D] uppercase">
-                                {new Date(event.date).toLocaleDateString("ro-RO", { month: "short" })}
-                              </span>
-                            </div>
-                          </div>
-
-                          {/* Event Details */}
-                          <div className="flex-1">
-                            <div className="flex items-center gap-2 mb-2">
-                              <span className={`w-2 h-2 rounded-full ${getEventTypeColor(event.type)}`}></span>
-                              <span className="text-xs font-medium text-[#666] uppercase">
-                                {t(`events.type.${event.type}`)}
-                              </span>
-                            </div>
-                            <h3 className="text-lg font-semibold text-[#2b2b2b] mb-2 group-hover:text-[#BE1E2D] transition-colors">
-                              {t(event.titleKey)}
-                            </h3>
-                            <p className="text-sm text-[#666] mb-3">
-                              {t(event.descKey)}
-                            </p>
-                            <div className="flex flex-wrap items-center gap-4 text-sm text-[#888]">
-                              <div className="flex items-center gap-1">
-                                <Clock className="w-4 h-4" />
-                                <span>{event.time}</span>
-                              </div>
-                              <div className="flex items-center gap-1">
-                                <MapPin className="w-4 h-4" />
-                                <span>{t(event.locationKey)}</span>
+                    {upcomingEvents.map((event) => {
+                      const Wrapper = event.link ? "a" : "div";
+                      const wrapperProps = event.link ? { href: event.link } : {};
+                      return (
+                        <Wrapper
+                          key={event.id}
+                          {...wrapperProps}
+                          className={`bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-all group block ${event.link ? "cursor-pointer" : ""}`}
+                        >
+                          <div className="flex items-start gap-4">
+                            {/* Date Badge */}
+                            <div className="flex-shrink-0 text-center">
+                              <div className="w-16 h-16 bg-[#BE1E2D]/10 rounded-lg flex flex-col items-center justify-center">
+                                <span className="text-2xl font-bold text-[#BE1E2D]">
+                                  {new Date(event.date).getDate()}
+                                </span>
+                                <span className="text-xs text-[#BE1E2D] uppercase">
+                                  {new Date(event.date).toLocaleDateString("ro-RO", { month: "short" })}
+                                </span>
                               </div>
                             </div>
-                            {event.meetingLink && (
-                              <a
-                                href={event.meetingLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-[#5059C9] text-white text-sm font-medium rounded-lg hover:bg-[#4048b8] transition-colors"
-                              >
-                                <Video className="w-4 h-4" />
-                                {t("events.joinMeeting")}
-                              </a>
-                            )}
-                          </div>
 
-                          {/* Arrow */}
-                          <ChevronRight className="w-5 h-5 text-[#ccc] group-hover:text-[#BE1E2D] transition-colors flex-shrink-0" />
-                        </div>
-                      </div>
-                    ))}
+                            {/* Event Details */}
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-2">
+                                <span className={`w-2 h-2 rounded-full ${getEventTypeColor(event.type)}`}></span>
+                                <span className="text-xs font-medium text-[#666] uppercase">
+                                  {t(`events.type.${event.type}`)}
+                                </span>
+                              </div>
+                              <h3 className="text-lg font-semibold text-[#2b2b2b] mb-2 group-hover:text-[#BE1E2D] transition-colors">
+                                {t(event.titleKey)}
+                              </h3>
+                              <p className="text-sm text-[#666] mb-3">
+                                {t(event.descKey)}
+                              </p>
+                              <div className="flex flex-wrap items-center gap-4 text-sm text-[#888]">
+                                <div className="flex items-center gap-1">
+                                  <Clock className="w-4 h-4" />
+                                  <span>{event.time}</span>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                  <MapPin className="w-4 h-4" />
+                                  <span>{t(event.locationKey)}</span>
+                                </div>
+                              </div>
+                              {event.meetingLink && (
+                                <a
+                                  href={event.meetingLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-[#5059C9] text-white text-sm font-medium rounded-lg hover:bg-[#4048b8] transition-colors"
+                                >
+                                  <Video className="w-4 h-4" />
+                                  {t("events.joinMeeting")}
+                                </a>
+                              )}
+                              {event.link && (
+                                <span className="inline-flex items-center gap-1 mt-3 text-sm font-medium text-[#BE1E2D]">
+                                  <Images className="w-4 h-4" />
+                                  {t("gallery.badge")}
+                                </span>
+                              )}
+                            </div>
+
+                            {/* Arrow */}
+                            <ChevronRight className="w-5 h-5 text-[#ccc] group-hover:text-[#BE1E2D] transition-colors flex-shrink-0" />
+                          </div>
+                        </Wrapper>
+                      );
+                    })}
                   </div>
 
                   {/* No events message */}

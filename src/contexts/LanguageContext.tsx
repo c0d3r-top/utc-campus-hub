@@ -559,6 +559,13 @@ const translations: Record<Language, Record<string, string>> = {
     "events.qrTitle": "QR Code",
     "events.qrDesc": "Scan to access the Events page",
 
+    // Gallery
+    "gallery.badge": "Photo Gallery",
+    "gallery.title": "IMPACT+UTCN Project Promotion Seminar",
+    "gallery.subtitle": "Photos from the IMPACT+UTCN project promotion seminar on March 16, 2026.",
+    "gallery.noPhotos": "Photos will be available soon",
+    "gallery.comingSoon": "Come back to see the event photo gallery.",
+
     // Cookies
     "cookies.message": "This site uses cookies to improve your experience. By continuing to browse, you accept their use.",
     "cookies.learnMore": "Learn more",

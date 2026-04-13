@@ -6,8 +6,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const Galerie = () => {
   const { t } = useLanguage();
 
-  // Placeholder - replace with real photos from the event
-  const photos: string[] = [];
+  const photos = [
+    "/galerie/foto-1.jpg",
+    "/galerie/foto-2.jpg",
+    "/galerie/foto-3.jpg",
+    "/galerie/foto-4.jpg",
+    "/galerie/foto-5.jpg",
+    "/galerie/foto-6.jpg",
+    "/galerie/foto-7.jpg",
+    "/galerie/foto-8.jpg",
+    "/galerie/foto-9.jpg",
+    "/galerie/foto-10.jpg",
+  ];
 
   return (
     <div className="min-h-screen bg-[#f9f9f9] flex flex-col">

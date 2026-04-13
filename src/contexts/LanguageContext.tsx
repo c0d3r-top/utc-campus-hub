@@ -293,6 +293,7 @@ const translations: Record<Language, Record<string, string>> = {
     "header.aboutUs": "About Us",
     "header.howToApply": "How to Apply?",
     "header.events": "Events",
+    "header.gallery": "Gallery",
     "header.login": "Login",
     
     // Footer

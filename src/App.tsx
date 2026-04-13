@@ -36,8 +36,8 @@ const App = () => (
               <Route path="/eligibilitate" element={<Eligibilitate />} />
               <Route path="/cum-aplic" element={<CumAplic />} />
               <Route path="/evenimente" element={<Evenimente />} />
-              <Route path="/galerie" element={<Galerie />} />
-              <Route path="/echipa" element={<Echipa />} />
+              <Route path="/galerie" element={<Navigate to="/galerie-foto" replace />} />
+              <Route path="/galerie-foto" element={<Galerie />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/gdpr" element={<GDPR />} />
               <Route path="/qr-evenimente" element={<QRCodeGenerator />} />

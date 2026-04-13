@@ -13,7 +13,7 @@ const UTCNHeader = () => {
     { label: t("header.aboutUs"), href: "/" },
     { label: t("header.howToApply"), href: "/cum-aplic" },
     { label: t("header.events"), href: "/evenimente" },
-    { label: t("header.gallery"), href: "/galerie" },
+    { label: t("header.gallery"), href: "/galerie-foto" },
   ];
 
   return (

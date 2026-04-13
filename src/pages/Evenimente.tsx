@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Clock, Users, ChevronRight, Video } from "lucide-react";
+import { Calendar, MapPin, Clock, Users, ChevronRight, Video, Images } from "lucide-react";
 import UTCNHeader from "@/components/UTCNHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 import { useLanguage } from "@/contexts/LanguageContext";

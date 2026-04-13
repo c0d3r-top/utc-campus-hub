@@ -24,6 +24,7 @@ const translations: Record<Language, Record<string, string>> = {
     "header.aboutUs": "Despre noi",
     "header.howToApply": "Cum aplic?",
     "header.events": "Evenimente",
+    "header.gallery": "Galerie",
     "header.login": "Autentificare",
     
     // Footer

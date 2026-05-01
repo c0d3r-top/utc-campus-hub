@@ -40,6 +40,15 @@ const Evenimente = () => {
       locationKey: "events.event4Location",
       type: "promotion",
     },
+    {
+      id: 4,
+      titleKey: "events.event5Title",
+      descKey: "events.event5Desc",
+      date: "2026-05-21",
+      time: "15:45",
+      locationKey: "events.event5Location",
+      type: "promotion",
+    },
   ];
 
   const getEventTypeColor = (type: string) => {

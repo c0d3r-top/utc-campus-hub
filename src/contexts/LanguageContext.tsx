@@ -288,8 +288,10 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Gallery
     "gallery.badge": "Galerie Foto",
-    "gallery.title": "Seminar de promovare proiect IMPACT+UTCN",
-    "gallery.subtitle": "Fotografii de la seminarul de promovare a proiectului IMPACT+UTCN din 16 martie 2026.",
+    "gallery.title": "Seminarii de promovare proiect IMPACT+UTCN",
+    "gallery.subtitle": "Fotografii de la seminariile de promovare a proiectului IMPACT+UTCN.",
+    "gallery.ev1Title": "Seminar de promovare proiect IMPACT+UTCN",
+    "gallery.ev2Title": "Seminar de promovare proiect IMPACT+UTCN",
     "gallery.noPhotos": "Fotografiile vor fi disponibile în curând",
     "gallery.comingSoon": "Reveniti pentru a vedea galeria foto de la eveniment.",
 
@@ -567,8 +569,10 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Gallery
     "gallery.badge": "Photo Gallery",
-    "gallery.title": "IMPACT+UTCN Project Promotion Seminar",
-    "gallery.subtitle": "Photos from the IMPACT+UTCN project promotion seminar on March 16, 2026.",
+    "gallery.title": "IMPACT+UTCN Project Promotion Seminars",
+    "gallery.subtitle": "Photos from the IMPACT+UTCN project promotion seminars.",
+    "gallery.ev1Title": "IMPACT+UTCN Project Promotion Seminar",
+    "gallery.ev2Title": "IMPACT+UTCN Project Promotion Seminar",
     "gallery.noPhotos": "Photos will be available soon",
     "gallery.comingSoon": "Come back to see the event photo gallery.",
 

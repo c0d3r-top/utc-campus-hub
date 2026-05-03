@@ -108,7 +108,7 @@ const CumAplic = () => {
                               {t("howToApply.doc1Link")}
                             </a>
                           )}
-                          {index === 3 && (
+                          {index === 4 && (
                             <a
                               href="/declaratie-evitare-dubla-finantare.pdf"
                               download="declaratie-evitare-dubla-finantare.pdf"
@@ -117,7 +117,7 @@ const CumAplic = () => {
                               {t("howToApply.doc4Link")}
                             </a>
                           )}
-                          {index === 4 && (
+                          {index === 5 && (
                             <a
                               href="/acord-gdpr-impact-utcn.pdf"
                               download="acord-gdpr-impact-utcn.pdf"

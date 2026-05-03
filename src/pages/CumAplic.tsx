@@ -175,7 +175,7 @@ const CumAplic = () => {
                   <div key={letter} className="bg-white rounded-lg p-5 border border-gray-200">
                     <div className="flex items-start gap-3 mb-3">
                       <span className="w-7 h-7 bg-[#F5A623] rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">{letter}</span>
-                      <p className="text-[#444] text-sm leading-relaxed flex-1 text-justify">{t(`howToApply.doc8${letter}`)}</p>
+                      <p className="text-[#444] text-sm font-medium leading-relaxed flex-1 text-justify">{t(`howToApply.doc8${letter}Short`)}</p>
                     </div>
                     {docs.length > 0 ? (
                       <ul className="ml-10 space-y-1 list-disc list-inside text-[#555] text-sm">

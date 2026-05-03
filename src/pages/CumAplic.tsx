@@ -29,6 +29,14 @@ const CumAplic = () => {
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2b2b2b] mb-6 leading-tight">{t("howToApply.title")}</h1>
               <p className="text-lg text-[#666] max-w-2xl mx-auto">{t("howToApply.subtitle")}</p>
+              <a
+                href="/regulament-acordare-burse-impact-utcn.pdf"
+                download="regulament-acordare-burse-impact-utcn.pdf"
+                className="inline-flex items-center gap-2 mt-6 px-5 py-3 rounded-lg bg-[#BE1E2D] text-white font-medium hover:bg-[#a01825] transition-colors"
+              >
+                <FileText className="w-4 h-4" />
+                {t("howToApply.regulamentBurse")}
+              </a>
             </div>
           </div>
         </section>

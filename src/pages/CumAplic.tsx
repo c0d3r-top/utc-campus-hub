@@ -131,8 +131,17 @@ const CumAplic = () => {
                               {t("howToApply.doc5Link")}
                             </a>
                           )}
+                          {index === 6 && (
+                            <a
+                              href="/declaratie-asumare-regulament-impact-utcn.pdf"
+                              download="declaratie-asumare-regulament-impact-utcn.pdf"
+                              className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                            >
+                              {t("howToApply.docRegulamentLink")}
+                            </a>
+                          )}
                         </p>
-                        {index === 7 && (
+                        {index === 8 && (
                           <div className="mt-4 bg-white rounded-lg p-4 border border-[#F5A623]/30">
                             <ul className="space-y-3">
                               {["a", "b", "c", "d"].map((letter) => (

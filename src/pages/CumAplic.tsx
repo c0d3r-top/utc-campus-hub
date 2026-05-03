@@ -12,7 +12,7 @@ const CumAplic = () => {
   const documenteOportunitatiReduseCategorii: { letter: string; docs: string[] }[] = [
     { letter: "a", docs: [t("howToApply.reducedDocA1"), t("howToApply.reducedDocA2")] },
     { letter: "b", docs: [t("howToApply.reducedDocB1"), t("howToApply.reducedDocB2"), t("howToApply.reducedDocB3")] },
-    { letter: "c", docs: [] },
+    { letter: "c", docs: [t("howToApply.reducedDocC1"), t("howToApply.reducedDocC2")] },
     { letter: "d", docs: [] },
   ];
 

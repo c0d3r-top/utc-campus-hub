@@ -126,6 +126,16 @@ const CumAplic = () => {
                           </a>
                         )}
                       </p>
+                      {index === 7 && (
+                        <ul className="mt-3 space-y-2 ml-2">
+                          {["a", "b", "c", "d"].map((letter) => (
+                            <li key={letter} className="flex items-start gap-2 text-[#444] text-sm leading-relaxed">
+                              <span className="w-5 h-5 bg-[#F5A623] rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5">{letter}</span>
+                              <span>{t(`howToApply.doc8${letter}`)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 ))}

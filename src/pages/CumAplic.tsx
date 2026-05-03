@@ -129,23 +129,11 @@ const CumAplic = () => {
                         </p>
                         {index === 7 && (
                           <div className="mt-4 bg-white rounded-lg p-4 border border-[#F5A623]/30">
-                            <p className="text-sm text-[#444] mb-3 italic">{t("howToApply.doc8AdditionalIntro")}</p>
                             <ul className="space-y-3">
                               {["a", "b", "c", "d"].map((letter) => (
                                 <li key={letter} className="flex items-start gap-3 text-[#444] text-sm leading-relaxed">
                                   <span className="w-6 h-6 bg-[#F5A623] rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5">{letter}</span>
-                                  <div className="flex-1">
-                                    <span className="block text-justify">{t(`howToApply.doc8${letter}`)}</span>
-                                    {letter === "a" && (
-                                      <div className="mt-2">
-                                        <p className="text-xs font-semibold text-[#BE1E2D] uppercase tracking-wide mb-1">{t("howToApply.additionalDocsLabel")}</p>
-                                        <ul className="ml-2 space-y-1 list-disc list-inside text-[#555]">
-                                          <li>{t("howToApply.doc8aDoc1")}</li>
-                                          <li>{t("howToApply.doc8aDoc2")}</li>
-                                        </ul>
-                                      </div>
-                                    )}
-                                  </div>
+                                  <span className="flex-1 text-justify">{t(`howToApply.doc8${letter}`)}</span>
                                 </li>
                               ))}
                             </ul>

@@ -179,7 +179,23 @@ const CumAplic = () => {
                     </div>
                     {docs.length > 0 ? (
                       <ul className="ml-10 space-y-1 list-disc list-inside text-[#555] text-sm">
-                        {docs.map((d, i) => (<li key={i}>{d}</li>))}
+                        {docs.map((d, i) => (
+                          <li key={i}>
+                            {d}
+                            {letter === "b" && i === 2 && (
+                              <>
+                                {" – "}
+                                <a
+                                  href="/acord-gdpr-membru-familie-impact-utcn.pdf"
+                                  download="acord-gdpr-membru-familie-impact-utcn.pdf"
+                                  className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                                >
+                                  {t("howToApply.docRegulamentLink")}
+                                </a>
+                              </>
+                            )}
+                          </li>
+                        ))}
                       </ul>
                     ) : (
                       <p className="ml-10 text-xs text-[#999] italic">{t("howToApply.docsToBeAdded")}</p>

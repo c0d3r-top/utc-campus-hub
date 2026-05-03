@@ -96,7 +96,19 @@ const CumAplic = () => {
                   <div key={index} className="bg-[#f9f9f9] rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                     <div className="flex items-start gap-3">
                       <div className="w-7 h-7 bg-[#BE1E2D]/10 rounded-full flex items-center justify-center flex-shrink-0"><span className="text-[#BE1E2D] font-bold text-xs">{index + 1}</span></div>
-                      <p className="text-[#444] text-sm leading-relaxed">{document}</p>
+                      <p className="text-[#444] text-sm leading-relaxed">
+                        {document}
+                        {index === 0 && (
+                          <a
+                            href="/CERERE_INSCRIERE_IN_PROIECT_IMPACT_UTCN.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                          >
+                            {t("howToApply.doc1Link")}
+                          </a>
+                        )}
+                      </p>
                     </div>
                   </div>
                 ))}

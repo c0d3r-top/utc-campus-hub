@@ -13,7 +13,7 @@ const CumAplic = () => {
     { letter: "a", docs: [t("howToApply.reducedDocA1"), t("howToApply.reducedDocA2")] },
     { letter: "b", docs: [t("howToApply.reducedDocB1"), t("howToApply.reducedDocB2"), t("howToApply.reducedDocB3")] },
     { letter: "c", docs: [t("howToApply.reducedDocC1"), t("howToApply.reducedDocC2")] },
-    { letter: "d", docs: [] },
+    { letter: "d", docs: [t("howToApply.reducedDocD1"), t("howToApply.reducedDocD2"), t("howToApply.reducedDocD3"), t("howToApply.reducedDocD4")] },
   ];
 
   return (

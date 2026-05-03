@@ -136,10 +136,15 @@ const CumAplic = () => {
                                   <div className="flex-1">
                                     <span className="block text-justify">{t(`howToApply.doc8${letter}`)}</span>
                                     {letter === "a" && (
-                                      <ul className="mt-2 ml-2 space-y-1 list-disc list-inside text-[#555]">
-                                        <li>{t("howToApply.doc8aDoc1")}</li>
-                                        <li>{t("howToApply.doc8aDoc2")}</li>
-                                      </ul>
+                                      <div className="mt-2">
+                                        <ul className="ml-2 space-y-1 list-disc list-inside text-[#555]">
+                                          <li>{t("howToApply.doc8aDoc1")}</li>
+                                        </ul>
+                                        <p className="my-1 ml-2 text-[#555] font-medium italic">{t("howToApply.or")}</p>
+                                        <ul className="ml-2 space-y-1 list-disc list-inside text-[#555]">
+                                          <li>{t("howToApply.doc8aDoc2")}</li>
+                                        </ul>
+                                      </div>
                                     )}
                                   </div>
                                 </li>

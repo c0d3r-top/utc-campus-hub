@@ -9,7 +9,7 @@ const CumAplic = () => {
 
   const conditiiObligatorii = [t("howToApply.condition1"), t("howToApply.condition2"), t("howToApply.condition3"), t("howToApply.condition4")];
   const documenteInscriere = [t("howToApply.doc1"), t("howToApply.doc2"), t("howToApply.doc3"), t("howToApply.doc7"), t("howToApply.doc4"), t("howToApply.doc5"), t("howToApply.doc6"), t("howToApply.doc8")];
-  const documenteOportunitatiReduse = [t("howToApply.reducedDoc1"), t("howToApply.reducedDoc2"), t("howToApply.reducedDoc3"), t("howToApply.reducedDoc4"), t("howToApply.reducedDoc5"), t("howToApply.reducedDoc6"), t("howToApply.reducedDoc7")];
+  const documenteOportunitatiReduse = [t("howToApply.reducedDoc1"), t("howToApply.reducedDoc2"), t("howToApply.reducedDoc3"), t("howToApply.reducedDoc4"), t("howToApply.reducedDoc5"), t("howToApply.reducedDoc6"), t("howToApply.reducedDoc7"), t("howToApply.reducedDoc8"), t("howToApply.reducedDoc9")];
 
   return (
     <div className="min-h-screen bg-[#f9f9f9] flex flex-col">

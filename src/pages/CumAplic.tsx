@@ -194,6 +194,18 @@ const CumAplic = () => {
                                 </a>
                               </>
                             )}
+                            {letter === "d" && i === 3 && (
+                              <>
+                                {" – "}
+                                <a
+                                  href="/declaratie-migrant-refugiat-impact-utcn.pdf"
+                                  download="declaratie-migrant-refugiat-impact-utcn.pdf"
+                                  className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                                >
+                                  {t("howToApply.docRegulamentLink")}
+                                </a>
+                              </>
+                            )}
                           </li>
                         ))}
                       </ul>

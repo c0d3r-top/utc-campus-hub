@@ -107,6 +107,15 @@ const CumAplic = () => {
                             {t("howToApply.doc1Link")}
                           </a>
                         )}
+                        {index === 3 && (
+                          <a
+                            href="/declaratie-evitare-dubla-finantare.pdf"
+                            download="declaratie-evitare-dubla-finantare.pdf"
+                            className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                          >
+                            {t("howToApply.doc4Link")}
+                          </a>
+                        )}
                       </p>
                     </div>
                   </div>

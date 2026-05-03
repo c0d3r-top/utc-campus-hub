@@ -161,13 +161,20 @@ const CumAplic = () => {
                 <h2 className="text-xl md:text-2xl font-bold text-[#2b2b2b]">{t("howToApply.reducedOpportunitiesTitle")}</h2>
               </div>
               <p className="text-[#666] mb-6 text-sm">{t("howToApply.reducedOpportunitiesIntro")}</p>
-              <div className="grid md:grid-cols-2 gap-3">
-                {documenteOportunitatiReduse.map((document, index) => (
-                  <div key={index} className="bg-white rounded-lg p-4 border border-gray-200">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="w-4 h-4 text-[#F5A623] flex-shrink-0 mt-1" />
-                      <p className="text-[#444] text-sm leading-relaxed">{document}</p>
+              <div className="space-y-4">
+                {documenteOportunitatiReduseCategorii.map(({ letter, docs }) => (
+                  <div key={letter} className="bg-white rounded-lg p-5 border border-gray-200">
+                    <div className="flex items-start gap-3 mb-3">
+                      <span className="w-7 h-7 bg-[#F5A623] rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0">{letter}</span>
+                      <p className="text-[#444] text-sm leading-relaxed flex-1 text-justify">{t(`howToApply.doc8${letter}`)}</p>
                     </div>
+                    {docs.length > 0 ? (
+                      <ul className="ml-10 space-y-1 list-disc list-inside text-[#555] text-sm">
+                        {docs.map((d, i) => (<li key={i}>{d}</li>))}
+                      </ul>
+                    ) : (
+                      <p className="ml-10 text-xs text-[#999] italic">{t("howToApply.docsToBeAdded")}</p>
+                    )}
                   </div>
                 ))}
               </div>

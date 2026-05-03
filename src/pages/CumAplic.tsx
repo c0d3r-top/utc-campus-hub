@@ -140,6 +140,18 @@ const CumAplic = () => {
                               {t("howToApply.doc5Link")}
                             </a>
                           )}
+                          {index === 9 && (
+                            <>
+                              {" – "}
+                              <a
+                                href="/contract-acordare-burse-impact-utcn.pdf"
+                                download="contract-acordare-burse-impact-utcn.pdf"
+                                className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                              >
+                                {t("howToApply.docRegulamentLink")}
+                              </a>
+                            </>
+                          )}
                         </p>
                         {index === 11 && (
                           <div className="mt-4 bg-white rounded-lg p-4 border border-[#F5A623]/30">

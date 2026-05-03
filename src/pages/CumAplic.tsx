@@ -96,46 +96,50 @@ const CumAplic = () => {
                   <div key={index} className="bg-[#f9f9f9] rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                     <div className="flex items-start gap-3">
                       <div className="w-7 h-7 bg-[#BE1E2D]/10 rounded-full flex items-center justify-center flex-shrink-0"><span className="text-[#BE1E2D] font-bold text-xs">{index + 1}</span></div>
-                      <p className="text-[#444] text-sm leading-relaxed">
-                        {document}
-                        {index === 0 && (
-                          <a
-                            href="/cerere-inscriere-impact-utcn.pdf"
-                            download="cerere-inscriere-impact-utcn.pdf"
-                            className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
-                          >
-                            {t("howToApply.doc1Link")}
-                          </a>
+                      <div className="flex-1">
+                        <p className="text-[#444] text-sm leading-relaxed">
+                          {document}
+                          {index === 0 && (
+                            <a
+                              href="/cerere-inscriere-impact-utcn.pdf"
+                              download="cerere-inscriere-impact-utcn.pdf"
+                              className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                            >
+                              {t("howToApply.doc1Link")}
+                            </a>
+                          )}
+                          {index === 3 && (
+                            <a
+                              href="/declaratie-evitare-dubla-finantare.pdf"
+                              download="declaratie-evitare-dubla-finantare.pdf"
+                              className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                            >
+                              {t("howToApply.doc4Link")}
+                            </a>
+                          )}
+                          {index === 4 && (
+                            <a
+                              href="/acord-gdpr-impact-utcn.pdf"
+                              download="acord-gdpr-impact-utcn.pdf"
+                              className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                            >
+                              {t("howToApply.doc5Link")}
+                            </a>
+                          )}
+                        </p>
+                        {index === 7 && (
+                          <div className="mt-4 bg-white rounded-lg p-4 border border-[#F5A623]/30">
+                            <ul className="space-y-3">
+                              {["a", "b", "c", "d"].map((letter) => (
+                                <li key={letter} className="flex items-start gap-3 text-[#444] text-sm leading-relaxed">
+                                  <span className="w-6 h-6 bg-[#F5A623] rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5">{letter}</span>
+                                  <span className="flex-1">{t(`howToApply.doc8${letter}`)}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         )}
-                        {index === 3 && (
-                          <a
-                            href="/declaratie-evitare-dubla-finantare.pdf"
-                            download="declaratie-evitare-dubla-finantare.pdf"
-                            className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
-                          >
-                            {t("howToApply.doc4Link")}
-                          </a>
-                        )}
-                        {index === 4 && (
-                          <a
-                            href="/acord-gdpr-impact-utcn.pdf"
-                            download="acord-gdpr-impact-utcn.pdf"
-                            className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
-                          >
-                            {t("howToApply.doc5Link")}
-                          </a>
-                        )}
-                      </p>
-                      {index === 7 && (
-                        <ul className="mt-3 space-y-2 ml-2">
-                          {["a", "b", "c", "d"].map((letter) => (
-                            <li key={letter} className="flex items-start gap-2 text-[#444] text-sm leading-relaxed">
-                              <span className="w-5 h-5 bg-[#F5A623] rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5">{letter}</span>
-                              <span>{t(`howToApply.doc8${letter}`)}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
+                      </div>
                     </div>
                   </div>
                 ))}

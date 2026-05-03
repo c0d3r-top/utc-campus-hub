@@ -116,6 +116,15 @@ const CumAplic = () => {
                             {t("howToApply.doc4Link")}
                           </a>
                         )}
+                        {index === 4 && (
+                          <a
+                            href="/acord-gdpr-impact-utcn.pdf"
+                            download="acord-gdpr-impact-utcn.pdf"
+                            className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                          >
+                            {t("howToApply.doc5Link")}
+                          </a>
+                        )}
                       </p>
                     </div>
                   </div>

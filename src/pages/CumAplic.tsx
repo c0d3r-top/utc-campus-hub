@@ -100,7 +100,7 @@ const CumAplic = () => {
                         {document}
                         {index === 0 && (
                           <a
-                            href="/CERERE_INSCRIERE_IN_PROIECT_IMPACT_UTCN.pdf"
+                            href="/cerere-inscriere-impact-utcn.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"

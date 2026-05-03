@@ -8,7 +8,7 @@ const CumAplic = () => {
   const { t } = useLanguage();
 
   const conditiiObligatorii = [t("howToApply.condition1"), t("howToApply.condition2"), t("howToApply.condition3"), t("howToApply.condition4")];
-  const documenteInscriere = [t("howToApply.doc1"), t("howToApply.doc2"), t("howToApply.doc3"), t("howToApply.doc7"), t("howToApply.doc4"), t("howToApply.doc5"), t("howToApply.docRegulament"), t("howToApply.doc6"), t("howToApply.doc8")];
+  const documenteInscriere = [t("howToApply.doc1"), t("howToApply.doc2"), t("howToApply.doc3"), t("howToApply.doc7"), t("howToApply.doc4"), t("howToApply.docRegulament"), t("howToApply.doc5"), t("howToApply.doc6"), t("howToApply.doc8")];
   const documenteOportunitatiReduseCategorii: { letter: string; docs: string[] }[] = [
     { letter: "a", docs: [t("howToApply.reducedDocA1"), t("howToApply.reducedDocA2")] },
     { letter: "b", docs: [] },
@@ -124,20 +124,20 @@ const CumAplic = () => {
                           )}
                           {index === 5 && (
                             <a
-                              href="/acord-gdpr-impact-utcn.pdf"
-                              download="acord-gdpr-impact-utcn.pdf"
-                              className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
-                            >
-                              {t("howToApply.doc5Link")}
-                            </a>
-                          )}
-                          {index === 6 && (
-                            <a
                               href="/declaratie-asumare-regulament-impact-utcn.pdf"
                               download="declaratie-asumare-regulament-impact-utcn.pdf"
                               className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
                             >
                               {t("howToApply.docRegulamentLink")}
+                            </a>
+                          )}
+                          {index === 6 && (
+                            <a
+                              href="/acord-gdpr-impact-utcn.pdf"
+                              download="acord-gdpr-impact-utcn.pdf"
+                              className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                            >
+                              {t("howToApply.doc5Link")}
                             </a>
                           )}
                         </p>

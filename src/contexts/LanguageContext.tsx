@@ -159,7 +159,7 @@ const translations: Record<Language, Record<string, string>> = {
     "howToApply.reducedDocB2": "declarație pe proprie răspundere privind nivelul educațional al părinților",
     "howToApply.reducedDocB3": "acordul olograf al membrilor familiei privind colectarea datelor cu caracter personal semnate în original de aceștia (Acord GDPR)",
     "howToApply.reducedDocC1": "copie certificat de naștere apartenent/(ți)",
-    "howToApply.reducedDocC2": "copie a actului doveditor privind calitatea de părinte unic (certificat de deces al celuilalt părinte, hotărâre judecătorească privind dispariția, sentință de încarcerare sau alte documente justificative, în cazul în care motivul este altul decât nerecunoașterea filiației prin certificatul de naștere)",
+    "howToApply.reducedDocC2": "copie act doveditor privind calitatea de părinte unic (certificat de deces al celuilalt părinte, hotărâre judecătorească privind dispariția, sentință de încarcerare sau alte documente justificative, în cazul în care motivul este altul decât nerecunoașterea filiației prin certificatul de naștere)",
     "howToApply.preApplicationTitle": "Formular de Pre-Aplicație",
     "howToApply.preApplicationDesc": "Completează chestionarul de pre-aplicație pentru sprijin financiar suplimentar mobilități studențești ERASMUS+.",
     "howToApply.scanQRInstruction": "Completează formularul scanând codul QR alăturat →",

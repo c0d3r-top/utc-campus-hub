@@ -8,7 +8,7 @@ const CumAplic = () => {
   const { t } = useLanguage();
 
   const conditiiObligatorii = [t("howToApply.condition1"), t("howToApply.condition2"), t("howToApply.condition3"), t("howToApply.condition4")];
-  const documenteInscriere = [t("howToApply.doc1"), t("howToApply.doc2"), t("howToApply.doc3"), t("howToApply.doc4"), t("howToApply.doc5"), t("howToApply.doc6"), t("howToApply.doc7"), t("howToApply.doc8")];
+  const documenteInscriere = [t("howToApply.doc1"), t("howToApply.doc2"), t("howToApply.doc3"), t("howToApply.doc7"), t("howToApply.doc4"), t("howToApply.doc5"), t("howToApply.doc6"), t("howToApply.doc8")];
   const documenteOportunitatiReduse = [t("howToApply.reducedDoc1"), t("howToApply.reducedDoc2"), t("howToApply.reducedDoc3"), t("howToApply.reducedDoc4"), t("howToApply.reducedDoc5"), t("howToApply.reducedDoc6"), t("howToApply.reducedDoc7")];
 
   return (
@@ -108,7 +108,7 @@ const CumAplic = () => {
                               {t("howToApply.doc1Link")}
                             </a>
                           )}
-                          {index === 3 && (
+                          {index === 4 && (
                             <a
                               href="/declaratie-evitare-dubla-finantare.pdf"
                               download="declaratie-evitare-dubla-finantare.pdf"
@@ -117,7 +117,7 @@ const CumAplic = () => {
                               {t("howToApply.doc4Link")}
                             </a>
                           )}
-                          {index === 4 && (
+                          {index === 5 && (
                             <a
                               href="/acord-gdpr-impact-utcn.pdf"
                               download="acord-gdpr-impact-utcn.pdf"

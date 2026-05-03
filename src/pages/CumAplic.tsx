@@ -182,6 +182,18 @@ const CumAplic = () => {
                         {docs.map((d, i) => (
                           <li key={i}>
                             {d}
+                            {letter === "b" && i === 1 && (
+                              <>
+                                {" – "}
+                                <a
+                                  href="/declaratie-nivel-educational-parinti-impact-utcn.pdf"
+                                  download="declaratie-nivel-educational-parinti-impact-utcn.pdf"
+                                  className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                                >
+                                  {t("howToApply.docRegulamentLink")}
+                                </a>
+                              </>
+                            )}
                             {letter === "b" && i === 2 && (
                               <>
                                 {" – "}

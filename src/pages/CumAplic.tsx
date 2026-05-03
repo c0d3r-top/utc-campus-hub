@@ -8,7 +8,7 @@ const CumAplic = () => {
   const { t } = useLanguage();
 
   const conditiiObligatorii = [t("howToApply.condition1"), t("howToApply.condition2"), t("howToApply.condition3"), t("howToApply.condition4")];
-  const documenteInscriere = [t("howToApply.doc1"), t("howToApply.doc2"), t("howToApply.doc3"), t("howToApply.doc7"), t("howToApply.doc6"), t("howToApply.doc4"), t("howToApply.docRegulament"), t("howToApply.doc5"), t("howToApply.docNotariat"), t("howToApply.doc8")];
+  const documenteInscriere = [t("howToApply.doc1"), t("howToApply.doc2"), t("howToApply.doc3"), t("howToApply.doc7"), t("howToApply.doc6"), t("howToApply.doc4"), t("howToApply.docRegulament"), t("howToApply.doc5"), t("howToApply.docNotariat"), t("howToApply.docContract"), t("howToApply.docExtrasCont"), t("howToApply.doc8")];
   const documenteOportunitatiReduseCategorii: { letter: string; docs: string[] }[] = [
     { letter: "a", docs: [t("howToApply.reducedDocA1"), t("howToApply.reducedDocA2")] },
     { letter: "b", docs: [] },
@@ -141,7 +141,7 @@ const CumAplic = () => {
                             </a>
                           )}
                         </p>
-                        {index === 9 && (
+                        {index === 11 && (
                           <div className="mt-4 bg-white rounded-lg p-4 border border-[#F5A623]/30">
                             <ul className="space-y-3">
                               {["a", "b", "c", "d"].map((letter) => (

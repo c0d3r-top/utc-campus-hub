@@ -101,8 +101,7 @@ const CumAplic = () => {
                         {index === 0 && (
                           <a
                             href="/cerere-inscriere-impact-utcn.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            download="cerere-inscriere-impact-utcn.pdf"
                             className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
                           >
                             {t("howToApply.doc1Link")}

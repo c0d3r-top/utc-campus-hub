@@ -112,6 +112,7 @@ const translations: Record<Language, Record<string, string>> = {
     "howToApply.badge": "Proces de Aplicare",
     "howToApply.title": "Cum Aplic?",
     "howToApply.subtitle": "Descoperă condițiile obligatorii și documentele necesare pentru înscrierea în proiectul IMPACT+UTCN.",
+    "howToApply.regulamentBurse": "Regulament de acordare a burselor",
     "howToApply.conditionsTitle": "Condiții Obligatorii pentru Acordarea Bursei",
     "howToApply.conditionsIntro": "Bursele pentru mobilitatea studenților se vor acorda numai studenților care:",
     "howToApply.condition1": "Sunt înscriși în grupul țintă al proiectului",

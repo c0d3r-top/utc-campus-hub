@@ -11,7 +11,7 @@ const CumAplic = () => {
   const documenteInscriere = [t("howToApply.doc1"), t("howToApply.doc2"), t("howToApply.doc3"), t("howToApply.doc7"), t("howToApply.doc6"), t("howToApply.doc4"), t("howToApply.docRegulament"), t("howToApply.doc5"), t("howToApply.docNotariat"), t("howToApply.docContract"), t("howToApply.docExtrasCont"), t("howToApply.doc8")];
   const documenteOportunitatiReduseCategorii: { letter: string; docs: string[] }[] = [
     { letter: "a", docs: [t("howToApply.reducedDocA1"), t("howToApply.reducedDocA2")] },
-    { letter: "b", docs: [] },
+    { letter: "b", docs: [t("howToApply.reducedDocB1"), t("howToApply.reducedDocB2"), t("howToApply.reducedDocB3")] },
     { letter: "c", docs: [] },
     { letter: "d", docs: [] },
   ];

@@ -420,6 +420,7 @@ const translations: Record<Language, Record<string, string>> = {
     "howToApply.badge": "Application Process",
     "howToApply.title": "How to Apply?",
     "howToApply.subtitle": "Discover the mandatory conditions and required documents for enrollment in the IMPACT+UTCN project.",
+    "howToApply.regulamentBurse": "Scholarship Award Regulation",
     "howToApply.conditionsTitle": "Mandatory Conditions for Scholarship Award",
     "howToApply.conditionsIntro": "Student mobility scholarships will be awarded only to students who:",
     "howToApply.condition1": "Register in the project's target group",

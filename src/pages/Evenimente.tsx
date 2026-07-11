@@ -29,7 +29,7 @@ const Evenimente = () => {
       time: "15:45",
       locationKey: "events.event2Location",
       type: "promotion",
-      link: "/galerie-foto",
+      link: "/galerie-foto#ev1",
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ const Evenimente = () => {
       time: "15:45",
       locationKey: "events.event4Location",
       type: "promotion",
-      link: "/galerie-foto",
+      link: "/galerie-foto#ev2",
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ const Evenimente = () => {
       time: "15:45",
       locationKey: "events.event5Location",
       type: "promotion",
-      link: "/galerie-foto",
+      link: "/galerie-foto#ev3",
     },
     {
       id: 5,
@@ -59,7 +59,7 @@ const Evenimente = () => {
       time: "15:45",
       locationKey: "events.event6Location",
       type: "promotion",
-      link: "/galerie-foto",
+      link: "/galerie-foto#ev4",
     },
   ];
 

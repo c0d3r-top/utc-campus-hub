@@ -58,6 +58,7 @@ const Evenimente = () => {
       time: "15:45",
       locationKey: "events.event6Location",
       type: "promotion",
+      link: "/galerie-foto",
     },
   ];
 

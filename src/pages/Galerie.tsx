@@ -114,7 +114,7 @@ const Galerie = () => {
             <div className="max-w-6xl mx-auto space-y-16">
               {totalPhotos > 0 ? (
                 eventGalleries.map((event) => (
-                  <article key={event.id}>
+                  <article key={event.id} id={event.id} className="scroll-mt-24">
                     <div className="mb-6 pb-4 border-b border-gray-200">
                       <h2 className="text-2xl md:text-3xl font-bold text-[#2b2b2b] mb-3">
                         {event.title}

@@ -16,6 +16,23 @@ const Galerie = () => {
 
   const eventGalleries: EventGallery[] = [
     {
+      id: "ev4",
+      title: t("gallery.ev4Title"),
+      date: "4 iunie 2026",
+      location: "Sala P09 (fosta BT)",
+      photos: [
+        "/ev4-foto-1.jpg",
+        "/ev4-foto-2.jpg",
+        "/ev4-foto-3.jpg",
+        "/ev4-foto-4.jpg",
+        "/ev4-foto-5.jpg",
+        "/ev4-foto-6.jpg",
+        "/ev4-foto-7.jpg",
+        "/ev4-foto-8.jpg",
+        "/ev4-foto-9.jpg",
+      ],
+    },
+    {
       id: "ev3",
       title: t("gallery.ev3Title"),
       date: "21 mai 2026",

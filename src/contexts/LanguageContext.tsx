@@ -323,6 +323,7 @@ const translations: Record<Language, Record<string, string>> = {
     "gallery.ev1Title": "Seminar de promovare proiect IMPACT+UTCN",
     "gallery.ev2Title": "Seminar de promovare proiect IMPACT+UTCN",
     "gallery.ev3Title": "Seminar de promovare proiect IMPACT+UTCN",
+    "gallery.ev4Title": "Seminar de promovare proiect IMPACT+UTCN",
     "gallery.noPhotos": "Fotografiile vor fi disponibile în curând",
     "gallery.comingSoon": "Reveniti pentru a vedea galeria foto de la eveniment.",
 
@@ -635,6 +636,7 @@ const translations: Record<Language, Record<string, string>> = {
     "gallery.ev1Title": "IMPACT+UTCN Project Promotion Seminar",
     "gallery.ev2Title": "IMPACT+UTCN Project Promotion Seminar",
     "gallery.ev3Title": "IMPACT+UTCN Project Promotion Seminar",
+    "gallery.ev4Title": "IMPACT+UTCN Project Promotion Seminar",
     "gallery.noPhotos": "Photos will be available soon",
     "gallery.comingSoon": "Come back to see the event photo gallery.",
 

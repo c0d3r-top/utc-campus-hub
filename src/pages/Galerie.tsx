@@ -1,4 +1,6 @@
 import { Images, Calendar, MapPin } from "lucide-react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import UTCNHeader from "@/components/UTCNHeader";
 import ProjectFooter from "@/components/ProjectFooter";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -13,6 +15,15 @@ interface EventGallery {
 
 const Galerie = () => {
   const { t } = useLanguage();
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.slice(1));
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [hash]);
+
 
   const eventGalleries: EventGallery[] = [
     {

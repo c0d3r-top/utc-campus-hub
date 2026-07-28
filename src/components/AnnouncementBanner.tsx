@@ -52,14 +52,10 @@ const AnnouncementBanner = () => {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#BE1E2D]/10">
-              <Megaphone className="h-6 w-6 text-[#BE1E2D]" />
-            </div>
-
-            <h2 className="mb-3 text-lg sm:text-xl font-bold text-[#222] leading-snug">
+            <h2 className="mb-3 text-center text-lg sm:text-xl font-bold text-[#222] leading-snug">
               {t("announce.title")}
             </h2>
-            <p className="text-[#444] leading-relaxed">{t("announce.body")}</p>
+            <p className="text-center text-[#444] leading-relaxed">{t("announce.body")}</p>
 
             <button
               onClick={closePopup}

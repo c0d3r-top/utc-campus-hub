@@ -8,11 +8,12 @@ import ProjectFooter from "@/components/ProjectFooter";
 const Index = () => {
   return (
     <div className="min-h-screen bg-[#f9f9f9] flex flex-col">
-      {/* Announcement above the logo */}
-      <AnnouncementBanner />
-
       {/* Official UTCN Header */}
       <UTCNHeader />
+
+      {/* Announcement below the header */}
+      <AnnouncementBanner />
+
 
 
       {/* Main Content */}

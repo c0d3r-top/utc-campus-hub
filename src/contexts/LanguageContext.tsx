@@ -649,6 +649,11 @@ const translations: Record<Language, Record<string, string>> = {
     "cookies.message": "This site uses cookies to improve your experience. By continuing to browse, you accept their use.",
     "cookies.learnMore": "Learn more",
     "cookies.accept": "Accept",
+
+    // Announcement
+    "announce.title": "📢 IMPACT+UTCN grants for Blended Intensive Programme (BIP) mobilities are no longer available",
+    "announce.body": "You can still apply for an IMPACT+UTCN grant for long-term Erasmus+ mobilities. ✈️",
+    "announce.close": "Got it",
   },
 };
 

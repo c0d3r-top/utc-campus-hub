@@ -333,7 +333,7 @@ const translations: Record<Language, Record<string, string>> = {
     "cookies.accept": "Accept",
 
     // Announcement
-    "announce.title": "📢 Bursele IMPACT+UTCN pentru programe de tip Blended Intensive Programme (BIP) au fost epuizate",
+    "announce.title": "📢 Bursele IMPACT+UTCN pentru programe de tip Blended Intensive Programmes (BIP) au fost epuizate",
     "announce.body": "Poți aplica în continuare pentru o bursă IMPACT+UTCN destinată mobilităților Erasmus+ de lungă durată. ✈️",
     "announce.close": "Am înțeles",
   },
@@ -651,7 +651,7 @@ const translations: Record<Language, Record<string, string>> = {
     "cookies.accept": "Accept",
 
     // Announcement
-    "announce.title": "📢 IMPACT+UTCN grants for Blended Intensive Programme (BIP) mobilities are no longer available",
+    "announce.title": "📢 IMPACT+UTCN grants for Blended Intensive Programmes (BIP) mobilities are no longer available",
     "announce.body": "You can still apply for an IMPACT+UTCN grant for long-term Erasmus+ mobilities. ✈️",
     "announce.close": "Got it",
   },

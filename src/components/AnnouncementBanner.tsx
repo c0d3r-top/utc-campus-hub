@@ -26,7 +26,7 @@ const AnnouncementBanner = () => {
         <div className="container mx-auto px-4 py-3">
           <div className="mx-auto w-full max-w-6xl text-center text-sm sm:text-base lg:text-lg leading-snug [text-wrap:balance]">
             <p className="w-full font-semibold">{t("announce.title")}</p>
-            <p className="w-full text-white/90">{t("announce.body")}</p>
+            <p className="w-full translate-x-[18px] text-white/90">{t("announce.body")}</p>
           </div>
         </div>
 

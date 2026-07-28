@@ -331,6 +331,11 @@ const translations: Record<Language, Record<string, string>> = {
     "cookies.message": "Acest site utilizează cookies pentru a îmbunătăți experiența dvs. Continuând să navigați, acceptați utilizarea acestora.",
     "cookies.learnMore": "Află mai multe",
     "cookies.accept": "Accept",
+
+    // Announcement
+    "announce.title": "📢 Bursele IMPACT+UTCN pentru programe de tip Blended Intensive Programme (BIP) au fost epuizate",
+    "announce.body": "Poți aplica în continuare pentru o bursă IMPACT+UTCN destinată mobilităților Erasmus+ de lungă durată. ✈️",
+    "announce.close": "Am înțeles",
   },
   en: {
     // Header

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Megaphone, X } from "lucide-react";
+import { X } from "lucide-react";
 
 const STORAGE_KEY = "bipAnnouncementSeen";
 

@@ -24,12 +24,9 @@ const AnnouncementBanner = () => {
       {/* Sticky top strip - always visible above the logo */}
       <div className="w-full bg-[#BE1E2D] text-white">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-center gap-3 text-center">
-            <Megaphone className="w-6 h-6 flex-shrink-0 hidden sm:block" />
-            <div className="text-base sm:text-lg leading-snug">
-              <p className="font-semibold">{t("announce.title")}</p>
-              <p className="text-white/90">{t("announce.body")}</p>
-            </div>
+          <div className="mx-auto max-w-4xl text-center text-base sm:text-lg leading-snug">
+            <p className="font-semibold">{t("announce.title")}</p>
+            <p className="text-white/90">{t("announce.body")}</p>
           </div>
         </div>
 

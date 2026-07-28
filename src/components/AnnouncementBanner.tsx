@@ -35,13 +35,13 @@ const AnnouncementBanner = () => {
       {/* Pop-up */}
       {showPopup && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4 animate-fade-in"
           role="dialog"
           aria-modal="true"
           onClick={closePopup}
         >
           <div
-            className="relative w-full max-w-lg rounded-xl bg-white p-6 sm:p-8 shadow-2xl"
+            className="relative w-full max-w-lg rounded-xl bg-white p-6 sm:p-8 shadow-2xl animate-enter"
             onClick={(e) => e.stopPropagation()}
           >
             <button

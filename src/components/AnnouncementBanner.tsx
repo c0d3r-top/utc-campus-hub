@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Megaphone, X } from "lucide-react";
+import { X } from "lucide-react";
 
 const STORAGE_KEY = "bipAnnouncementSeen";
 
@@ -24,12 +24,9 @@ const AnnouncementBanner = () => {
       {/* Sticky top strip - always visible above the logo */}
       <div className="w-full bg-[#BE1E2D] text-white">
         <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-center gap-3 text-center">
-            <Megaphone className="w-6 h-6 flex-shrink-0 hidden sm:block" />
-            <div className="text-base sm:text-lg leading-snug">
-              <p className="font-semibold">{t("announce.title")}</p>
-              <p className="text-white/90">{t("announce.body")}</p>
-            </div>
+          <div className="mx-auto max-w-4xl text-center text-base sm:text-lg leading-snug">
+            <p className="font-semibold">{t("announce.title")}</p>
+            <p className="text-white/90">{t("announce.body")}</p>
           </div>
         </div>
 
@@ -55,14 +52,10 @@ const AnnouncementBanner = () => {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#BE1E2D]/10">
-              <Megaphone className="h-6 w-6 text-[#BE1E2D]" />
-            </div>
-
-            <h2 className="mb-3 text-lg sm:text-xl font-bold text-[#222] leading-snug">
+            <h2 className="mb-3 text-center text-lg sm:text-xl font-bold text-[#222] leading-snug">
               {t("announce.title")}
             </h2>
-            <p className="text-[#444] leading-relaxed">{t("announce.body")}</p>
+            <p className="text-center text-[#444] leading-relaxed">{t("announce.body")}</p>
 
             <button
               onClick={closePopup}

@@ -122,13 +122,16 @@ const CumAplic = () => {
                             </a>
                           )}
                           {index === 4 && (
-                            <a
-                              href="/formular-inregistrare-fip-impact-utcn.pdf"
-                              download="formular-inregistrare-fip-impact-utcn.pdf"
-                              className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
-                            >
-                              {t("howToApply.doc1Link")}
-                            </a>
+                            <>
+                              {" – "}
+                              <a
+                                href="/formular-inregistrare-fip-impact-utcn.pdf"
+                                download="formular-inregistrare-fip-impact-utcn.pdf"
+                                className="text-[#BE1E2D] font-medium underline hover:text-[#a01825] transition-colors"
+                              >
+                                {t("howToApply.doc1Link")}
+                              </a>
+                            </>
                           )}
                           {index === 5 && (
                             <a
